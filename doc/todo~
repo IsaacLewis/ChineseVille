@@ -1,0 +1,87 @@
+RESEARCH
+- try other flashcard softwares
+-- Anki
+-- Mnemosyne
+-- SuperMemo
+
+PRODUCT
+
+- write tests
+-- building tests
+-- building type tests
+-- flashcard_test tests
+-- users tests
+-- village tests
+-- words tests
+
+- repetitive spacing algorithm
+-- design implementation
+
+- better pinyin representation
+-- add methods to Word model for pinyin display
+--- .with_tones
+
+- building types
+-- research buildings
+-- enumerate building bonus types (ie happiness, culture, etc)
+
+- add images for buildings
+-- use paperclip system
+
+- happiness system
+-- enumerate uppers and downers
+
+- combo bonus for multiple right answers
+
+- dont show multiple answers of the same value (eg pinyin)
+
+- flashcards have limited time to answer
+-- client-side
+-- server-side
+
+- buildings
+-- grey out unbuildable buildings
+-- show needed flashcards to unlock buildings
+
+- stats page
+
+- vocabulary lists
+-- find out how to import
+-- design
+-- implement
+
+- design
+-- flashcard page
+--- fix overflowing text on flashcards
+--- show bling on right answers
+-- village page
+
+- lock villages page to new users
+
+- popups when each building unlocked
+
+- new users
+-- c/o users plugin
+-- sign up thru FB
+-- sign up thru email
+-- new users get flashcards and village
+
+- tweak clocks
+-- rate of increase
+-- max/min values
+-- update calling JS
+
+- rankings of friends
+
+- recruiting friends to jobs
+
+- version control
+-- c/o SVN vs GIT
+
+MARKETING
+
+- post on language forums
+-- and again
+--- and again
+
+- work out viral strategy

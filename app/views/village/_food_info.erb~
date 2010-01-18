@@ -1,0 +1,1 @@
+"Production: <%= @village.food_production %> from <%= @user.learned_words %> learned words<br />Consumption: <%= @village.food_consumption %>"

@@ -1,0 +1,3 @@
+Production: <%= @village.food_production.add_plus %> (+3 x <%= @user.learned_words %> learned words)
+<br />
+Consumption: <%= -@village.food_consumption %> (<%= -@village.food_consumption_per_person %> x <%= @village.population %> people)

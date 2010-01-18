@@ -1,0 +1,38 @@
+class VillageController < ApplicationController
+  before_filter :get_village
+
+  def build
+    @village.build_building params[:type_id].to_i, 1
+    index
+    render :index
+  end
+
+  def food_info
+    render :partial => 'food_info'
+  end
+
+  def quality_of_life_info
+    render :partial => 'quality_of_life'
+  end
+
+  def set_rations
+    @village.set_rations params[:ration_level]
+    index
+    render :index
+  end
+
+  def index
+  end
+
+  def locked
+    hut = BuildingType.first_where(:name => 'Hut')
+    @requirements = hut.flashcards_required User.find(2)
+  end
+
+  private
+
+  def get_village
+    locked and render :locked and return unless @user.village_unlocked?
+    @village = @user.village
+  end
+end

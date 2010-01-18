@@ -1,0 +1,26 @@
+<h1><%= @village.name %></h1>
+<b><%= render :partial => "population" %></b>
+<br />
+<b>Quality of life: <%= @village.quality_of_life.add_plus %></b>
+<hr />
+<b><%= render :partial => "food" %></b>
+<br />
+<b>Ration level: <%= @village.ration_level %> rations</b>
+<br />
+<% for level in ['no','half','normal','extra','double'] %>
+  <% form_tag ({:controller => 'village', :action => 'set_rations'}, :method => :post, :class => "inline") do %>
+    <%= hidden_field_tag :ration_level, level %>
+    <%= submit_tag level + " rations", :class => "game_button" %> 
+  <% end %>
+<% end %>
+
+<hr />
+<% for building in @village.buildings %>
+<div>
+  <b><%= building.type.name%></b> - <%= building.amount %> built - <b><%= building.type.cost %> food</b> 
+  <% form_tag ({:controller => "village", :action => "build"}, :method => :post, :class => "inline") do %>
+    <%= hidden_field_tag :type_id, building.type_id %>
+    <%= submit_tag "Build " + building.type.name, :class => "game_button" %> 
+  <% end %>
+</div>
+<% end %>

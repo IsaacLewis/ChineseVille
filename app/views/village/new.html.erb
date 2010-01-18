@@ -1,0 +1,8 @@
+<b>Choose a name for your new village:</b>
+<% form_for :village, @village, :url => {:action => :create} do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.text_field :name %>
+    <%= f.submit 'Settle!' %>
+  </p>
+<% end %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  flashcard_id: 1
+  answer_id: 1
+
+two:
+  flashcard_id: 1
+  answer_id: 1

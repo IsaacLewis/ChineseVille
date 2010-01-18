@@ -1,0 +1,18 @@
+<% flashcard_id = "flashcard-#{flashcard.id}" %>
+<% tooltip_id = "tooltip-#{flashcard.id}" %>
+
+<div id="<%= flashcard_id%>" class="<%= css_class %>" style="background-color:#<%= flashcard.html_bg_colour %>">
+<b><%= flashcard.character %></b>
+</div>
+
+<div id="<%= tooltip_id %>" style="display:none" class="tooltip">
+<b><%= flashcard.english %></b> / <b><%= flashcard.pinyin %></b>
+<br />
+Knowledge chance: <%= flashcard.knowledge_chance %>%
+<br />
+Tests: <%= flashcard.correct_tests %>/<%= flashcard.correct_tests + flashcard.incorrect_tests %>
+<br />
+Last studied: <%= flashcard.last_studied %>
+</div>
+
+<%= javascript_tag "new Tooltip('#{flashcard_id}', '#{tooltip_id}')" %>

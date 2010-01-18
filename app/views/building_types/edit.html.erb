@@ -1,0 +1,36 @@
+<h1>Editing building_type</h1>
+
+<% form_for(@building_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :bonus_type %><br />
+    <%= f.text_field :bonus_type %>
+  </p>
+  <p>
+    <%= f.label :effect %><br />
+    <%= f.text_field :effect %>
+  </p>
+  <p>
+    <%= f.label :words_required %><br />
+    <%= f.text_field :words_required %>
+  </p>
+  <p>
+    <%= f.label :cost %><br />
+    <%= f.text_field :cost %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @building_type %> |
+<%= link_to 'Back', building_types_path %>

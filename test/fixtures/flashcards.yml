@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  word_id: 1
+  user_id: 1
+  knowledge_chance: 1
+  correct_tests: 1
+  incorrect_tests: 1
+
+two:
+  word_id: 1
+  user_id: 1
+  knowledge_chance: 1
+  correct_tests: 1
+  incorrect_tests: 1

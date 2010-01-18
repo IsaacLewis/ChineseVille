@@ -1,0 +1,18 @@
+<p>
+  <b>English:</b>
+  <%=h @word.english %>
+</p>
+
+<p>
+  <b>Pinyin:</b>
+  <%=h @word.pinyin %>
+</p>
+
+<p>
+  <b>Character:</b>
+  <%=h @word.character %>
+</p>
+
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>

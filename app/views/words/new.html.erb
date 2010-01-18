@@ -1,0 +1,23 @@
+<h1>New word</h1>
+
+<% form_for(@word) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :english %><br />
+    <%= f.text_field :english %>
+  </p>
+  <p>
+    <%= f.label :pinyin %><br />
+    <%= f.text_field :pinyin %>
+  </p>
+  <p>
+    <%= f.label :character %><br />
+    <%= f.text_field :character %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', words_path %>

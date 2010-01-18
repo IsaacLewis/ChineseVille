@@ -1,0 +1,6 @@
+<% for line in list.in_groups_of 7 %>
+  <% for flashcard in line %>
+    <% next if flashcard.nil? %>
+  <% end %>
+  <br />
+<% end %>

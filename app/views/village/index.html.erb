@@ -1,0 +1,44 @@
+<h1><%= @village.name %></h1>
+<b><%= render :partial => "population" %></b>
+<br />
+<b>Quality of life: <%= @village.quality_of_life.add_plus %></b>
+<%= link_to_remote( "more info",
+                   :update => "quality-of-life-info",
+                   :url => { :action => :quality_of_life_info } ) %>
+<div id="quality-of-life-info"></div>
+
+<hr />
+<%= render :partial => "food" %>
+<br />
+<b>Ration level: <%= @village.display_ration_level %></b>
+<br />
+<% for level in ['no','half','normal','extra','double'] %>
+  <% form_tag ({:controller => 'village', :action => 'set_rations'}, :method => :post, :class => "inline") do %>
+    <%= hidden_field_tag :ration_level, level %>
+    <%= submit_tag level + " rations", :class => "game_button" %> 
+  <% end %>
+<% end %>
+
+<hr />
+<% for building in @village.buildables %>
+<div>
+  <b><%= building.name%></b> - <%= @village.amount_of building %> built - <b><%= building.cost %> rice</b> 
+  <% form_tag ({:controller => "village", :action => "build"}, :method => :post, :class => "inline") do %>
+    <%= hidden_field_tag :type_id, building.id %>
+    <%= submit_tag "Build " + building.name, :class => "game_button" %> 
+  <% end %>
+</div>
+<% end %>
+
+<% for building in @village.unbuildables %>
+<div>
+  <b><%= building.name %></b> - master these words to unlock:
+</div>
+<br />
+<div>
+  <% for flashcard in building.flashcards_required @user %>
+    <%= render :partial => "stats/flashcard", :object => flashcard, :locals => {:css_class => 'tiny-flashcard'} %>  
+  <% end %>
+</div>
+<br />
+<% end %>

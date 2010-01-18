@@ -1,0 +1,10 @@
+<% if @correct %>
+  <div class="last_answer correct_answer">
+    Correct!
+  </div>
+<% else %>
+  <div class="last_answer incorrect_answer">
+    Incorrect: the English for <b><%=@last_flashcard.word.character %></b>/<b><%=@last_flashcard.word.pinyin %></b> is <b><%=@last_flashcard.word.english %></b>.
+  </div>
+<% end %>
+</div>

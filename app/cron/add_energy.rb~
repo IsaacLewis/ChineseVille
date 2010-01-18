@@ -1,0 +1,3 @@
+User.all.each do |user|
+  user.bounded_update :energy, +1, 30
+end

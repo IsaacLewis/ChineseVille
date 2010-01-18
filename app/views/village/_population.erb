@@ -1,0 +1,4 @@
+Population: <span id='population'><%=@village.population %></span>/<%=@village.max_population %>
+ (<%= @village.population_growth.add_plus %> in <span id='popClock'></span>)
+
+<%= javascript_tag "tickClock(#{seconds_to_next_population.to_s},#{1.day.to_s},'popClock','population',#{@village.population.to_s})" %>

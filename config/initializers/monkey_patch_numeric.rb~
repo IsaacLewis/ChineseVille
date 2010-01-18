@@ -1,0 +1,5 @@
+class Numeric
+  def add_plus
+    self < 0 ? to_s : "+" + to_s
+  end
+end

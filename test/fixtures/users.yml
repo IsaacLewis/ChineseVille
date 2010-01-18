@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  energy: 1
+  food: 1
+  authentication: MyString
+
+two:
+  name: MyString
+  energy: 1
+  food: 1
+  authentication: MyString

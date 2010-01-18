@@ -1,0 +1,541 @@
+Unable to load test, underlying cause no such file to load -- test 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/isaac/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/home/isaac/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/home/isaac/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/home/isaac/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/home/isaac/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/home/isaac/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/home/isaac/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/home/isaac/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/home/isaac/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test_helper.rb:35
+unit/village_test.rb:1:in `require'
+unit/village_test.rb:1
+Unable to load test, underlying cause no such file to load -- test 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/isaac/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/home/isaac/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/home/isaac/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/home/isaac/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/home/isaac/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/home/isaac/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/home/isaac/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/home/isaac/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/home/isaac/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test_helper.rb:35
+unit/village_test.rb:1:in `require'
+unit/village_test.rb:1
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 1) [0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 2) [0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 1) [0m
+  [4;36;1mVillage Load (0.4ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.4ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mVillage Load (0.4ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "building_types" [0m
+
+
+Processing BuildingTypesController#create (for 0.0.0.0 at 2010-01-17 14:00:43) [POST]
+  Parameters: {"building_type"=>{}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "building_types" [0m
+  [4;35;1mBuildingType Load (0.4ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#destroy (for 0.0.0.0 at 2010-01-17 14:00:43) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#edit (for 0.0.0.0 at 2010-01-17 14:00:43) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing BuildingTypesController#index (for 0.0.0.0 at 2010-01-17 14:00:43) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing BuildingTypesController#new (for 0.0.0.0 at 2010-01-17 14:00:43) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#show (for 0.0.0.0 at 2010-01-17 14:00:44) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.6ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#update (for 0.0.0.0 at 2010-01-17 14:00:44) [PUT]
+  Parameters: {"id"=>"980190962", "building_type"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "words" [0m
+
+
+Processing WordsController#create (for 0.0.0.0 at 2010-01-17 14:00:44) [POST]
+  Parameters: {"word"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "words" [0m
+  [4;36;1mWord Load (0.4ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#destroy (for 0.0.0.0 at 2010-01-17 14:00:44) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.4ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#edit (for 0.0.0.0 at 2010-01-17 14:00:44) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing WordsController#index (for 0.0.0.0 at 2010-01-17 14:00:44) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing WordsController#new (for 0.0.0.0 at 2010-01-17 14:00:44) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.5ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#show (for 0.0.0.0 at 2010-01-17 14:00:44) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.4ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#update (for 0.0.0.0 at 2010-01-17 14:00:44) [PUT]
+  Parameters: {"word"=>{}, "id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "building_types" [0m
+
+
+Processing BuildingTypesController#create (for 0.0.0.0 at 2010-01-17 14:04:36) [POST]
+  Parameters: {"building_type"=>{}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "building_types" [0m
+  [4;35;1mBuildingType Load (0.7ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#destroy (for 0.0.0.0 at 2010-01-17 14:04:36) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#edit (for 0.0.0.0 at 2010-01-17 14:04:36) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing BuildingTypesController#index (for 0.0.0.0 at 2010-01-17 14:04:36) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing BuildingTypesController#new (for 0.0.0.0 at 2010-01-17 14:04:36) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#show (for 0.0.0.0 at 2010-01-17 14:04:36) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#update (for 0.0.0.0 at 2010-01-17 14:04:36) [PUT]
+  Parameters: {"id"=>"980190962", "building_type"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "words" [0m
+
+
+Processing WordsController#create (for 0.0.0.0 at 2010-01-17 14:04:36) [POST]
+  Parameters: {"word"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "words" [0m
+  [4;36;1mWord Load (0.4ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#destroy (for 0.0.0.0 at 2010-01-17 14:04:36) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.4ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#edit (for 0.0.0.0 at 2010-01-17 14:04:36) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing WordsController#index (for 0.0.0.0 at 2010-01-17 14:04:36) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing WordsController#new (for 0.0.0.0 at 2010-01-17 14:04:36) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.4ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#show (for 0.0.0.0 at 2010-01-17 14:04:36) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.6ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#update (for 0.0.0.0 at 2010-01-17 14:04:36) [PUT]
+  Parameters: {"word"=>{}, "id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "building_types" [0m
+
+
+Processing BuildingTypesController#create (for 0.0.0.0 at 2010-01-17 14:08:52) [POST]
+  Parameters: {"building_type"=>{}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "building_types" [0m
+  [4;35;1mBuildingType Load (0.4ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#destroy (for 0.0.0.0 at 2010-01-17 14:08:52) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#edit (for 0.0.0.0 at 2010-01-17 14:08:52) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing BuildingTypesController#index (for 0.0.0.0 at 2010-01-17 14:08:52) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing BuildingTypesController#new (for 0.0.0.0 at 2010-01-17 14:08:52) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.6ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#show (for 0.0.0.0 at 2010-01-17 14:08:52) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#update (for 0.0.0.0 at 2010-01-17 14:08:52) [PUT]
+  Parameters: {"id"=>"980190962", "building_type"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "words" [0m
+
+
+Processing WordsController#create (for 0.0.0.0 at 2010-01-17 14:08:52) [POST]
+  Parameters: {"word"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "words" [0m
+  [4;36;1mWord Load (0.3ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#destroy (for 0.0.0.0 at 2010-01-17 14:08:52) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.4ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#edit (for 0.0.0.0 at 2010-01-17 14:08:52) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing WordsController#index (for 0.0.0.0 at 2010-01-17 14:08:52) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing WordsController#new (for 0.0.0.0 at 2010-01-17 14:08:52) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.4ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#show (for 0.0.0.0 at 2010-01-17 14:08:52) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.4ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#update (for 0.0.0.0 at 2010-01-17 14:08:52) [PUT]
+  Parameters: {"word"=>{}, "id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mVillage Load (0.5ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "building_types" [0m
+
+
+Processing BuildingTypesController#create (for 0.0.0.0 at 2010-01-17 14:15:01) [POST]
+  Parameters: {"building_type"=>{}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "building_types" [0m
+  [4;35;1mBuildingType Load (0.4ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#destroy (for 0.0.0.0 at 2010-01-17 14:15:01) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#edit (for 0.0.0.0 at 2010-01-17 14:15:01) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing BuildingTypesController#index (for 0.0.0.0 at 2010-01-17 14:15:01) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing BuildingTypesController#new (for 0.0.0.0 at 2010-01-17 14:15:01) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#show (for 0.0.0.0 at 2010-01-17 14:15:01) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM "building_types" WHERE ("building_types"."id" = 980190962) [0m
+
+
+Processing BuildingTypesController#update (for 0.0.0.0 at 2010-01-17 14:15:01) [PUT]
+  Parameters: {"id"=>"980190962", "building_type"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "words" [0m
+
+
+Processing WordsController#create (for 0.0.0.0 at 2010-01-17 14:15:01) [POST]
+  Parameters: {"word"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "words" [0m
+  [4;36;1mWord Load (0.3ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#destroy (for 0.0.0.0 at 2010-01-17 14:15:01) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.5ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#edit (for 0.0.0.0 at 2010-01-17 14:15:01) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing WordsController#index (for 0.0.0.0 at 2010-01-17 14:15:01) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing WordsController#new (for 0.0.0.0 at 2010-01-17 14:15:01) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.4ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#show (for 0.0.0.0 at 2010-01-17 14:15:01) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mWord Load (0.8ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."id" = 980190962) [0m
+
+
+Processing WordsController#update (for 0.0.0.0 at 2010-01-17 14:15:01) [PUT]
+  Parameters: {"word"=>{}, "id"=>"980190962"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mVillage Load (0.4ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.4ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.8ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mVillage Load (0.5ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.5ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '2182') LIMIT 1[0m
+  [4;36;1mVillage Create (0.6ms)[0m   [0;1mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('2182', '2010-01-18 15:27:45', 'normal', '2010-01-18 15:27:45', NULL, NULL)[0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '2182' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (87.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mVillage Load (0.4ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mVillage Load (0.5ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.2ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '8750') LIMIT 1[0m
+  [4;36;1mVillage Create (0.3ms)[0m   [0;1mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('8750', '2010-01-18 15:28:13', 'normal', '2010-01-18 15:28:13', NULL, NULL)[0m
+  [4;35;1mVillage Load (0.2ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '8750' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;36;1mVillage Load (0.9ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mVillage Load (0.6ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.9ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mVillage Load (0.6ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.5ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6702') LIMIT 1[0m
+  [4;36;1mVillage Create (0.7ms)[0m   [0;1mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('6702', '2010-01-18 22:44:02', 'normal', '2010-01-18 22:44:02', 1, NULL)[0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6702' AND "villages".id <> 980190963) LIMIT 1[0m

@@ -1,0 +1,25 @@
+<%= render :partial => "status" %>
+<hr />
+<%= render :partial => "answer" unless @last_answer.nil? %>
+<div id="flashcard" style="color:#222;background-color:#<%= @flashcard.html_bg_colour %>">
+<div id="hint1"><%= @flashcard.hint1 %></div>
+<div id="hint2"><%= @flashcard.hint2.add_breaks '; ' %></div>
+</div>
+
+<table>
+<tr>
+<% for answer in @possible_answers[0..4] %>
+  <td>
+    <%= render :partial => "answer_button", :locals => {:answer => answer} %>
+  </td>
+<% end %>
+</tr>
+<tr>
+<% for answer in @possible_answers[5..9] %>
+  <td>
+    <%= render :partial => "answer_button", :locals => {:answer => answer} %>
+  </td>
+<% end %>
+</tr>
+</table>
+

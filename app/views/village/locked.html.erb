@@ -1,0 +1,7 @@
+<b>Master the following words to unlock your village:</b>
+<div>
+  <% for flashcard in @requirements %>
+    <%= render :partial => "stats/flashcard", :object => flashcard, :locals => {:css_class => 'small-flashcard'} %>
+  <% end %>
+</div>
+

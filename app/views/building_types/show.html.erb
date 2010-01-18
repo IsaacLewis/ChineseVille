@@ -1,0 +1,32 @@
+<p>
+  <b>Name:</b>
+  <%=h @building_type.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @building_type.description %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @building_type.bonus_type %>
+</p>
+
+<p>
+  <b>Effect:</b>
+  <%=h @building_type.effect %>
+</p>
+
+<p>
+  <b>Words required:</b>
+  <%=h @building_type.words_required %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%=h @building_type.cost %>
+</p>
+
+<%= link_to 'Edit', edit_building_type_path(@building_type) %> |
+<%= link_to 'Back', building_types_path %>

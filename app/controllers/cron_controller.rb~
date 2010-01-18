@@ -1,0 +1,5 @@
+class CronController < ApplicationController
+  def add_energy
+  end
+
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  village_id: 1
+  type_id: 1
+  amount: 1
+
+two:
+  village_id: 1
+  type_id: 1
+  amount: 1

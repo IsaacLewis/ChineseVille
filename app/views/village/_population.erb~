@@ -1,0 +1,3 @@
+Energy: <span id='energy'><%= @user.energy %></span>/30
+(more in <span id='clock'></span>)
+<%= javascript_tag "tickClock("+seconds_to_next_energy.to_s+",360,"+@user.energy.to_s+")" %>

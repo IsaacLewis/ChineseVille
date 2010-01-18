@@ -1,0 +1,7 @@
+<% for line in list.in_groups_of 7 %>
+  <% for flashcard in line %>
+    <% next if flashcard.nil? %>
+    <%= render :partial => "flashcard", :object => flashcard, :locals => {:css_class => 'small-flashcard'} %>
+  <% end %>
+  <br />
+<% end %>
