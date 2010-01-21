@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   private
 
   def require_login
-    @user = User.find 2
+    @user = User.find 1
     @user.reload
   end
 

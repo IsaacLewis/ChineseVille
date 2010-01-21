@@ -539,3 +539,11 @@ Processing WordsController#update (for 0.0.0.0 at 2010-01-17 14:15:01) [PUT]
   [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6702') LIMIT 1[0m
   [4;36;1mVillage Create (0.7ms)[0m   [0;1mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('6702', '2010-01-18 22:44:02', 'normal', '2010-01-18 22:44:02', 1, NULL)[0m
   [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6702' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;36;1mVillage Load (0.6ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.5ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.2ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6157') LIMIT 1[0m
+  [4;36;1mVillage Create (0.3ms)[0m   [0;1mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('6157', '2010-01-21 13:16:19', 'normal', '2010-01-21 13:16:19', 1, NULL)[0m
+  [4;35;1mVillage Load (0.2ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6157' AND "villages".id <> 980190963) LIMIT 1[0m

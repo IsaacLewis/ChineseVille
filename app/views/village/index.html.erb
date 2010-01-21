@@ -22,6 +22,9 @@
 <hr />
 <% for building in @village.buildables %>
 <div>
+  <% if building.image.exists? then %>
+    <%= image_tag building.image.url(:thumb) %>
+  <% end %>
   <b><%= building.name%></b> - <%= @village.amount_of building %> built - <b><%= building.cost %> rice</b> 
   <% form_tag ({:controller => "village", :action => "build"}, :method => :post, :class => "inline") do %>
     <%= hidden_field_tag :type_id, building.id %>

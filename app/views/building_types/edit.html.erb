@@ -1,6 +1,6 @@
 <h1>Editing building_type</h1>
 
-<% form_for(@building_type) do |f| %>
+<% form_for(@building_type, :html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -26,6 +26,10 @@
   <p>
     <%= f.label :cost %><br />
     <%= f.text_field :cost %>
+  </p>
+  <p>
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
   </p>
   <p>
     <%= f.submit 'Update' %>

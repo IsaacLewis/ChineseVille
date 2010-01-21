@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100118222757) do
+ActiveRecord::Schema.define(:version => 20100121131424) do
 
   create_table "building_types", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(:version => 20100118222757) do
     t.string   "bonus_type"
     t.integer  "cost"
     t.string   "words_required"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
   end
 
   create_table "buildings", :force => true do |t|

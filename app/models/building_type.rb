@@ -1,5 +1,6 @@
 class BuildingType < ActiveRecord::Base
   has_many :buildings
+  has_attached_file :image, :styles => {:thumb => "100x100#"}
 
   def word_ids_required
     eval(read_attribute :words_required)

@@ -25,9 +25,6 @@ PRODUCT
 -- research buildings
 -- enumerate building bonus types (ie happiness, culture, etc)
 
-- add images for buildings
--- use paperclip system
-
 - happiness system
 -- enumerate uppers and downers
 
