@@ -1,0 +1,5 @@
+<b>Choose a vocabulary list to study:</b>
+
+<% for list in WordList.all %>
+  <b><5= list.name %></b>
+<% end %>

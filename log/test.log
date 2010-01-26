@@ -547,3 +547,205 @@ Processing WordsController#update (for 0.0.0.0 at 2010-01-17 14:15:01) [PUT]
   [4;35;1mVillage Load (0.2ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6157') LIMIT 1[0m
   [4;36;1mVillage Create (0.3ms)[0m   [0;1mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('6157', '2010-01-21 13:16:19', 'normal', '2010-01-21 13:16:19', 1, NULL)[0m
   [4;35;1mVillage Load (0.2ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6157' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;36;1mVillage Load (0.5ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.6ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.2ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '4178') LIMIT 1[0m
+  [4;36;1mVillage Create (0.3ms)[0m   [0;1mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('4178', '2010-01-25 15:27:58', 'normal', '2010-01-25 15:27:58', 1, NULL)[0m
+  [4;35;1mVillage Load (0.2ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '4178' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;36;1mVillage Load (0.7ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.5ms)[0m   [0;1mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.2ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '5488') LIMIT 1[0m
+  [4;36;1mVillage Create (0.4ms)[0m   [0;1mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('5488', '2010-01-25 15:28:09', 'normal', '2010-01-25 15:28:09', 1, NULL)[0m
+  [4;35;1mVillage Load (0.2ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '5488' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.2ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.5ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.5ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6359') LIMIT 1[0m
+  [4;35;1mVillage Create (0.4ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('6359', '2010-01-25 15:48:08', 'normal', '2010-01-25 15:48:08', 1, NULL)[0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6359' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.2ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '61') LIMIT 1[0m
+  [4;35;1mVillage Create (0.3ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('61', '2010-01-26 21:03:11', 'normal', '2010-01-26 21:03:11', 1, NULL)[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '61' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.3ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.3ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '9939') LIMIT 1[0m
+  [4;35;1mVillage Create (0.3ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('9939', '2010-01-26 21:03:39', 'normal', '2010-01-26 21:03:39', 1, NULL)[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '9939' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.2ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.5ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6729') LIMIT 1[0m
+  [4;35;1mVillage Create (0.3ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('6729', '2010-01-26 21:04:16', 'normal', '2010-01-26 21:04:16', 1, NULL)[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6729' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.3ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.5ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.4ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.6ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6486') LIMIT 1[0m
+  [4;35;1mVillage Create (0.4ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('6486', '2010-01-26 21:05:15', 'normal', '2010-01-26 21:05:15', 1, NULL)[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6486' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;35;1mWordList Load (0.2ms)[0m   [0mSELECT * FROM "word_lists" WHERE ("word_lists"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.2ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.5ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '2807') LIMIT 1[0m
+  [4;35;1mVillage Create (0.3ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('2807', '2010-01-26 21:05:37', 'normal', '2010-01-26 21:05:37', 1, NULL)[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '2807' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;35;1mWordList Load (0.1ms)[0m   [0mSELECT * FROM "word_lists" WHERE ("word_lists"."id" = 0) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.2ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6244') LIMIT 1[0m
+  [4;35;1mVillage Create (0.3ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('6244', '2010-01-26 21:06:53', 'normal', '2010-01-26 21:06:53', 1, NULL)[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '6244' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;35;1mWordList Load (0.1ms)[0m   [0mSELECT * FROM "word_lists" WHERE ("word_lists"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.2ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (2.3ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '4096') LIMIT 1[0m
+  [4;35;1mVillage Create (0.3ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('4096', '2010-01-26 21:07:32', 'normal', '2010-01-26 21:07:32', 1, NULL)[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '4096' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;35;1mWordList Load (0.3ms)[0m   [0mSELECT * FROM "word_lists" WHERE ("word_lists"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.2ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.6ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.4ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '1162') LIMIT 1[0m
+  [4;35;1mVillage Create (0.4ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('1162', '2010-01-26 21:27:46', 'normal', '2010-01-26 21:27:46', 1, NULL)[0m
+  [4;36;1mVillage Load (1.0ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '1162' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;35;1mWordList Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: word_lists.user_id: SELECT * FROM "word_lists" WHERE ("word_lists".user_id = 980190962) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.2ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.5ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '3116') LIMIT 1[0m
+  [4;35;1mVillage Create (0.3ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('3116', '2010-01-26 21:28:52', 'normal', '2010-01-26 21:28:52', 1, NULL)[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '3116' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;35;1mWordList Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: word_lists.user_id: SELECT * FROM "word_lists" WHERE ("word_lists".user_id = 980190962) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.2ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (1.8ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '7929') LIMIT 1[0m
+  [4;35;1mVillage Create (0.3ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('7929', '2010-01-26 21:36:53', 'normal', '2010-01-26 21:36:53', 1, NULL)[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '7929' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;35;1mWordList Load (0.2ms)[0m   [0mSELECT * FROM "word_lists" WHERE ("word_lists"."id" = 64810937) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mFlashcard Load (0.2ms)[0m   [0;1mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" BETWEEN 80 AND 100) AND ("flashcards".user_id = 980190962) [0m
+  [4;35;1mFlashcard Load (0.2ms)[0m   [0mSELECT * FROM "flashcards" WHERE ("flashcards"."knowledge_chance" >= 0 AND "flashcards"."knowledge_chance" < 80) AND ("flashcards".user_id = 980190962) ORDER BY knowledge_chance DESC[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "flashcards" WHERE ("flashcards".user_id = 980190962) [0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.4ms)[0m   [0mSELECT * FROM "villages" WHERE ("villages"."id" = 980190962) [0m
+  [4;36;1mVillage Load (0.3ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;35;1mVillage Load (0.3ms)[0m   [0mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = 'Beijing') LIMIT 1[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '7178') LIMIT 1[0m
+  [4;35;1mVillage Create (0.3ms)[0m   [0mINSERT INTO "villages" ("name", "created_at", "ration_level", "updated_at", "population", "user_id") VALUES('7178', '2010-01-26 21:37:40', 'normal', '2010-01-26 21:37:40', 1, NULL)[0m
+  [4;36;1mVillage Load (0.2ms)[0m   [0;1mSELECT "villages".id FROM "villages" WHERE ("villages"."name" = '7178' AND "villages".id <> 980190963) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 298486374) [0m
+  [4;35;1mWordList Load (0.3ms)[0m   [0mSELECT * FROM "word_lists" WHERE ("word_lists"."id" = 1) [0m

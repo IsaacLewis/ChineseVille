@@ -8,6 +8,10 @@ class Flashcard < ActiveRecord::Base
   :knowledge_chance
   validates_inclusion_of :knowledge_chance, :in => 0..100
 
+  LearningThreshold = 80
+  
+  def efactor; read_attribute(:efactor).to_f; end
+
   def hint_types
     case knowledge_chance
     when (0..19) then [:character, :pinyin, :english]
@@ -15,6 +19,11 @@ class Flashcard < ActiveRecord::Base
     when (40..59) then [:character, :english, :pinyin]
     else [:english, :pinyin, :character]
     end
+  end
+
+  def current_word_list
+    return nil if current_list.nil?
+    WordList.find current_list
   end
 
   def hint1_type; hint_types[0]; end
@@ -42,6 +51,21 @@ class Flashcard < ActiveRecord::Base
     possible_answers.shuffle!
   end
 
+  def update_due_date(q)
+    # if the character hasn't been learned, or doesn't have a 
+    # next due date, we won't start scheduling it for SRS yet
+    return unless learned? or !next_due.nil?
+    if last_interval.nil?
+      new_interval = 1
+    else
+      new_interval = last_interval * efactor
+    end
+    new_efactor = efactor + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02))
+    update_attribute :next_due, Time.now + new_interval.days
+    update_attribute :last_interval, new_interval
+    update_attribute :efactor, [new_efactor, 1.3].max
+  end
+
   def check_answer(answer)
     correct = (self.word_id == answer.id)
     if correct
@@ -59,10 +83,11 @@ class Flashcard < ActiveRecord::Base
     user.unbounded_update :food, +3 unless learned? or recently_answered_correctly?
     bounded_update :knowledge_chance, +17, 100
     unbounded_update :correct_tests, +1
+    update_due_date 5
 
     message = 'Correct!'
     if not previously_learned and learned?
-        message += " You have mastered the word #{character}!"
+        message += " You have mastered the word #{self.character}!"
     end
 
     buildings_unlocked = user.buildables - previously_buildable
@@ -76,12 +101,17 @@ class Flashcard < ActiveRecord::Base
     bounded_update :knowledge_chance, -17, 0
     unbounded_update :incorrect_tests, +1
     user.bounded_update :energy, -1, 0
+    update_due_date 0
     wrong_answer_message
   end
 
   def wrong_answer_message
     "Incorrect: the #{answer_type} for " +
       "<b>#{hint1}</b>/<b>#{hint2}</b> is <b>#{answer}</b>."
+  end
+
+  def learned?
+    knowledge_chance > LearningThreshold
   end
 
   def recently_answered_correctly?
@@ -94,6 +124,15 @@ class Flashcard < ActiveRecord::Base
     last_test = tests.first :order => "created_at DESC"
     return "never" if last_test.nil?
     (Time.now - last_test.created_at).to_approximate_duration + " ago"
+  end
+
+  def due_in
+    return '' if next_due.nil?
+    if next_due < Time.now
+      (Time.now - next_due).to_approximate_duration + ' ago'
+    else
+      'in ' + (next_due - Time.now).to_approximate_duration
+    end
   end
 
   # ranges from 220 to 120
@@ -116,9 +155,5 @@ class Flashcard < ActiveRecord::Base
 
   def html_text_colour
     [html_red,html_green,html_blue].map {|h| (h.hex - 70).to_s 16}.join   
-  end
-
-  def learned?
-    knowledge_chance > 80
   end
 end

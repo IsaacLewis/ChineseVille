@@ -16,7 +16,7 @@ class Village < ActiveRecord::Base
     BuildingType.all.select {|b| user.can_build? b}
   end
 
-  def unbuildables
+  def unbuildables 
     BuildingType.all.select {|b| !user.can_build? b}.take 3
   end
 

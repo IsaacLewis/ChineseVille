@@ -45,7 +45,7 @@ class VillageController < ApplicationController
 
   def locked
     hut = BuildingType.first_where(:name => 'Hut')
-    @requirements = hut.flashcards_required User.find(2)
+    @requirements = hut.flashcards_required @user
   end
 
   private

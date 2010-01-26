@@ -1,0 +1,10 @@
+<b>Choose a vocabulary list to study:</b>
+<hr />
+
+<% for list in WordList.all %>
+  <% form_tag ({:controller => "flashcard", :action => "select_list"}, :method => :post) do %>
+    <%= hidden_field_tag :list_id, list.id %>
+    <%= submit_tag list.name, :class => "game_button" %> 
+  <% end %>
+  <hr />
+<% end %>

@@ -1,5 +1,5 @@
-<b>Rice: <span id='food'><%=@village.food %></span>
- (<%= @village.net_food.add_plus %> in <span id='foodClock'></span>)</b>
+<b>Rice:</b> <span id='food'><%=@village.food %></span>
+ (<%= @village.net_food.add_plus %> in <span id='foodClock'></span>)
 
 <%= link_to_remote( "more info",
                    :update => "food-info",

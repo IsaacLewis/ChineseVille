@@ -6,6 +6,24 @@ RESEARCH
 
 PRODUCT
 
+- add hard/good/easy option
+-- add buttons
+-- add controller code
+-- update model
+
+- vocabulary lists
+-- figure out how to implement
+-- html parsers
+
+- new users
+-- sign up thru FB
+-- sign up thru email
+-- new users get flashcards and village
+
+- inviting friends
+
+- friends page
+
 - write tests
 -- building tests
 -- building type tests
@@ -14,8 +32,7 @@ PRODUCT
 -- village tests
 -- words tests
 
-- repetitive spacing algorithm
--- design implementation
+- ads mixed in with flashcards
 
 - better pinyin representation
 -- add methods to Word model for pinyin display
@@ -36,25 +53,15 @@ PRODUCT
 -- client-side
 -- server-side
 
-- vocabulary lists
--- find out how to import
--- design
--- implement
-
 - design
 -- flashcard page
 --- fix overflowing text on flashcards
+--- dynamically sized text on flashcards
 --- show bling on right answers
 -- village page
 
 - popups when each building unlocked
 -- javascript popup
-
-- new users
--- c/o users plugin
--- sign up thru FB
--- sign up thru email
--- new users get flashcards and village
 
 - tweak clocks
 -- rate of increase
@@ -62,6 +69,8 @@ PRODUCT
 -- update calling JS
 
 - rankings of friends
+
+- inviting friends
 
 - recruiting friends to jobs
 

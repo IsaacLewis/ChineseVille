@@ -1,3 +1,3 @@
-Energy: <span id='energy'><%= @user.energy %></span>/30
+Energy: <span id='energy'><%= @user.energy %></span>/<%= User::MaxEnergy %>
 (more in <span id='energyClock'></span>)
-<%= javascript_tag "tickClock(#{seconds_to_next_energy.to_s},360,'energyClock','energy',#{@user.energy.to_s})" %>
+<%= javascript_tag "tickClock(#{User.seconds_to_next_energy.to_s},#{User::EnergyTick},'energyClock','energy',#{@user.energy.to_s})" %>

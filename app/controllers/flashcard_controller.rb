@@ -1,6 +1,12 @@
 class FlashcardController < ApplicationController
+  before_filter :check_word_list, :check_energy
+  skip_before_filter :check_word_list, :only => [:select_list]
 
-  before_filter :check_energy
+  def select_list
+    @user.set_list params[:list_id]
+    test
+    render :test
+  end
 
   def test
     @flashcard = @user.next_flashcard :exclude => @last_flashcard
@@ -18,6 +24,11 @@ class FlashcardController < ApplicationController
   end
 
   private
+
+  def check_word_list
+    @list = @user.current_list
+    render :choose_list and return if @list.nil?
+  end
 
   def check_energy
     render :no_energy and return if @user.energy <= 0

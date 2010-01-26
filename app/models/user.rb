@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_one :village
+  belongs_to :current_list, :class_name => "WordList"
   has_many :flashcards
   has_many :words, :through => :flashcards
   has_many :tests, :through => :flashcards
@@ -8,13 +9,19 @@ class User < ActiveRecord::Base
 
   MaxFlashcards = 12
   MinFlashcards = 10
+  MaxEnergy = 20
+  EnergyTick = 600
+
+  def self.seconds_to_next_energy
+    User::EnergyTick - (Time.now.to_i % User::EnergyTick)
+  end
 
   def admin?
     id == 1
   end
 
   def add_energy
-    bounded_update :energy, +1, 30
+    bounded_update :energy, +1, MaxEnergy
   end
 
   def buildables
@@ -54,17 +61,24 @@ class User < ActiveRecord::Base
     end
   end
 
-  def next_flashcard(options)
+  def next_flashcard(options={})
     if needs_more_flashcards?
       begin
         make_more_flashcards
       rescue ActiveRecord::RecordNotFound
         # if user has learned all the words, just give them
         # a random flashcard
-        return flashcards.rand if unlearned_flashcards.count < 2
+        if unlearned_flashcards.empty?
+          return flashcards.rand
+        else
+          return unlearned_flashcards.rand
+        end
       end
+    elsif has_due_flashcards?
+      return due_flashcards.first
+    else
+      unlearned_flashcards.remove(options[:exclude]).rand
     end
-    unlearned_flashcards.remove(options[:exclude]).rand
   end
 
   def needs_more_flashcards?
@@ -72,15 +86,36 @@ class User < ActiveRecord::Base
   end
 
   def learned_flashcards
-    flashcards.select {|f| f.learned?}
+    flashcards.all :conditions => 
+      {:knowledge_chance => Flashcard::LearningThreshold..100}
   end
 
   def unlearned_flashcards
-    flashcards.select {|f| not f.learned?}
+    flashcards.all :order => "knowledge_chance DESC",
+    :conditions => {:knowledge_chance => 0...Flashcard::LearningThreshold}
+  end
+
+  def due_flashcards
+    flashcards.all :order => :next_due,
+    :conditions => {:next_due => (100.years.ago)..Time.now}
+  end
+
+  def due_flashcards_count
+    Flashcard.count :conditions => 
+      {:user_id => self.id,:next_due => (100.years.ago)..Time.now}
+  end
+
+  def has_due_flashcards?
+    due_flashcards_count > 0
   end
 
   def learned_words
     Flashcard.count :conditions => 
-      {:user_id => self.id, :knowledge_chance => (80..100)}
+      {:user_id => self.id, 
+      :knowledge_chance => (Flashcard::LearningThreshold..100)}
+  end
+
+  def set_list(list_id)
+    update_attribute :current_list_id, list_id
   end
 end

@@ -4,7 +4,7 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   background-color: #899;
   line-height: 140%;
-  font-size: 15px;
+  font-size: 16px;
   margin:0;
   padding:0;
 }
@@ -21,7 +21,7 @@ pre {
 
 a { color: #000; }
 a:visited { color: #666; }
-a:hover { color: #fff; background-color:#333; }
+a:hover { color: #fff; background-color:#464; }
 
 .last_answer {
   font-size: 120%;
@@ -82,10 +82,11 @@ a:hover { color: #fff; background-color:#333; }
   padding: 100px;
   padding-top: 50px;
   padding-bottom: 50px;
+  float: left;
 }
 
 #hint1 {
-  font-size: 100px;
+  font-size: 44px;
   line-height: 100%;
   width: 220px;
   min-height: 120px;
@@ -93,29 +94,49 @@ a:hover { color: #fff; background-color:#333; }
 
 #hint2 {
   line-height: 100%;
-  font-size: 60px;
+  font-size: 32px;
   width: 220px;
   min-height: 80px;
 }
 
 .answer {
-  background: #353;
-  color: #8a8;
-  border: 3px outset #353;
+  background: #686;
+  color: #222;
+  border: 2px outset #353;
   text-align: center;
-  margin: 2px;
+  font-size: 20px;
+  margin: 0px;
   padding: 10px;
-  width: 80px;
-  height: 60px;
+  width: 200px;
+  height: 50px;
+  display: inline;
 }
 
 .game_button{
-  background: #353;
-  color: #8a8;
+  background: #686;
+  color: #222;
   border: 3px outset #353;
   text-align: center;
   margin: 2px;
   padding: 5px;
+}
+
+#footer {
+  clear: both;
+}
+
+#answer_box {
+  float: right;
+  position: absolute;
+  left: 425px;
+}
+
+.skinny_table {
+  border: 0px;
+}
+
+.skinny_table td {
+  padding: 0px;
 }
 
 .inline {
@@ -138,7 +159,7 @@ a:hover { color: #fff; background-color:#333; }
 	display:block;
 	float:left;
 	padding:1ex 1em;
-	color:#353;
+	color:#333;
 	text-decoration:none;
 }
 

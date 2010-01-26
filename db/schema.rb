@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100121131424) do
+ActiveRecord::Schema.define(:version => 20100126213059) do
 
   create_table "building_types", :force => true do |t|
     t.string   "name"
@@ -48,6 +48,9 @@ ActiveRecord::Schema.define(:version => 20100121131424) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "incorrect_tests"
+    t.datetime "next_due"
+    t.decimal  "efactor",          :default => 2.5
+    t.integer  "last_interval"
   end
 
   create_table "users", :force => true do |t|
@@ -57,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20100121131424) do
     t.string   "authentication"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "current_list_id"
   end
 
   create_table "villages", :force => true do |t|
@@ -68,12 +72,20 @@ ActiveRecord::Schema.define(:version => 20100121131424) do
     t.string   "ration_level", :default => "normal"
   end
 
+  create_table "word_lists", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "words", :force => true do |t|
     t.string   "english"
     t.string   "pinyin"
     t.string   "character"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "word_list_id"
+    t.integer  "position"
   end
 
 end

@@ -1,6 +1,7 @@
 class Word < ActiveRecord::Base
   has_many :flashcards
   has_many :users, :through => :flashcards
+  belongs_to :word_list
 
   def no_tone
     pinyin.gsub /[0-9]/, ''

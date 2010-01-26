@@ -1,7 +1,7 @@
 <h1><%= @village.name %></h1>
-<b><%= render :partial => "population" %></b>
+<%= render :partial => "population" %>
 <br />
-<b>Quality of life: <%= @village.quality_of_life.add_plus %></b>
+<b>Quality of life:</b> <%= @village.quality_of_life.add_plus %>
 <%= link_to_remote( "more info",
                    :update => "quality-of-life-info",
                    :url => { :action => :quality_of_life_info } ) %>
@@ -10,7 +10,7 @@
 <hr />
 <%= render :partial => "food" %>
 <br />
-<b>Ration level: <%= @village.display_ration_level %></b>
+<b>Food supply:</b> <%= @village.display_ration_level %>
 <br />
 <% for level in ['no','half','normal','extra','double'] %>
   <% form_tag ({:controller => 'village', :action => 'set_rations'}, :method => :post, :class => "inline") do %>

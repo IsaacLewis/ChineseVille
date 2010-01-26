@@ -13,6 +13,11 @@ Knowledge chance: <%= flashcard.knowledge_chance %>%
 Tests: <%= flashcard.correct_tests %>/<%= flashcard.correct_tests + flashcard.incorrect_tests %>
 <br />
 Last studied: <%= flashcard.last_studied %>
+<br />
+<%= "Due: #{flashcard.due_in}<br />" unless flashcard.next_due.nil? %>
+E-factor: <%= flashcard.efactor %>
 </div>
 
 <%= javascript_tag "new Tooltip('#{flashcard_id}', '#{tooltip_id}')" %>
+
+
