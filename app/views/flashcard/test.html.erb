@@ -1,6 +1,5 @@
 <%= render :partial => "answer" unless @last_flashcard.nil? or @answer_message.blank? %>
 <%= render :partial => "status" %>
-
 <div id="flashcard" style="color:#222;background-color:#<%= @flashcard.html_bg_colour %>">
 <div id="hint1"><%= @flashcard.hint1 %></div>
 <div id="hint2"><%= @flashcard.hint2.add_breaks '; ' %></div>

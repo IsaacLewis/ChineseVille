@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100131174349) do
+ActiveRecord::Schema.define(:version => 20100131221013) do
 
   create_table "building_types", :force => true do |t|
     t.string   "name"
@@ -55,12 +55,13 @@ ActiveRecord::Schema.define(:version => 20100131174349) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.integer  "energy"
-    t.integer  "food"
+    t.integer  "energy",          :default => 20
+    t.integer  "food",            :default => 0
     t.string   "authentication"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "current_list_id"
+    t.integer  "facebook_id"
   end
 
   create_table "villages", :force => true do |t|

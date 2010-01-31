@@ -3,6 +3,7 @@
 
 class ApplicationController < ActionController::Base
   layout "default"
+  ensure_authenticated_to_facebook
   before_filter :require_login
 
   helper :all # include all helpers, all the time
@@ -14,7 +15,11 @@ class ApplicationController < ActionController::Base
   private
 
   def require_login
-    @user = User.find 2
+    @fbuser = session[:facebook_session].user
+    @user = User.first_where :facebook_id => @fbuser.facebook_id
+    if @user.nil?
+      @user = User.create_from @fbuser 
+    end
     @user.reload
   end
 

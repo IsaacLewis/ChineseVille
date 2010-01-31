@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :words
 
+  map.connect '', :controller => :flashcard, :action => :test
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

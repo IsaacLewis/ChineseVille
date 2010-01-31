@@ -12,6 +12,14 @@ class User < ActiveRecord::Base
   MaxEnergy = 20
   EnergyTick = 600
 
+  def self.create_from(fb_user)
+    new = create :name => fb_user.name, 
+    :facebook_id => fb_user.facebook_id,
+    :authentication => 'facebook'
+    new.save
+    new
+  end
+
   def self.seconds_to_next_energy
     User::EnergyTick - (Time.now.to_i % User::EnergyTick)
   end
