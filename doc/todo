@@ -6,13 +6,7 @@ RESEARCH
 
 PRODUCT
 
-- add hard/good/easy option
--- add buttons
--- add controller code
--- update model
-
 - vocabulary lists
--- figure out how to implement
 -- html parsers
 
 - new users
@@ -32,6 +26,8 @@ PRODUCT
 -- village tests
 -- words tests
 
+- fix getting right answer on refresh
+
 - ads mixed in with flashcards
 
 - better pinyin representation
@@ -44,6 +40,10 @@ PRODUCT
 
 - happiness system
 -- enumerate uppers and downers
+
+- trickier answers
+-- record common confusions
+-- choose answers based on common confusions
 
 - combo bonus for multiple right answers
 

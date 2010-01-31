@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100126213059) do
+ActiveRecord::Schema.define(:version => 20100131174349) do
 
   create_table "building_types", :force => true do |t|
     t.string   "name"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20100126213059) do
     t.datetime "updated_at"
     t.string   "bonus_type"
     t.integer  "cost"
-    t.string   "words_required"
+    t.integer  "words_required",     :limit => 255
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -43,14 +43,14 @@ ActiveRecord::Schema.define(:version => 20100126213059) do
   create_table "flashcards", :force => true do |t|
     t.integer  "word_id"
     t.integer  "user_id"
-    t.integer  "knowledge_chance"
-    t.integer  "correct_tests"
+    t.integer  "knowledge_chance", :default => 0
+    t.integer  "correct_tests",    :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "incorrect_tests"
+    t.integer  "incorrect_tests",  :default => 0
     t.datetime "next_due"
     t.decimal  "efactor",          :default => 2.5
-    t.integer  "last_interval"
+    t.decimal  "last_interval"
   end
 
   create_table "users", :force => true do |t|

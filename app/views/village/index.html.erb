@@ -35,13 +35,7 @@
 
 <% for building in @village.unbuildables %>
 <div>
-  <b><%= building.name %></b> - master these words to unlock:
-</div>
-<br />
-<div>
-  <% for flashcard in building.flashcards_required @user %>
-    <%= render :partial => "stats/flashcard", :object => flashcard, :locals => {:css_class => 'tiny-flashcard'} %>  
-  <% end %>
+  <b><%= building.name %></b> - master <b><%= building.words_required %></b> words to unlock
 </div>
 <br />
 <% end %>

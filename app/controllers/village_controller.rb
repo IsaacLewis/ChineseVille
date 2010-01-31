@@ -44,15 +44,20 @@ class VillageController < ApplicationController
   end
 
   def locked
-    hut = BuildingType.first_where(:name => 'Hut')
-    @requirements = hut.flashcards_required @user
   end
 
   private
 
   def get_village
-    locked and render :locked and return unless @user.village_unlocked?
-    new and render :new and return unless @user.has_village?
+    unless @user.village_unlocked?
+      render :locked
+      return
+    end
+    unless @user.has_village?
+      new
+      render :new
+      return 
+    end
     @village = @user.village
   end
 end

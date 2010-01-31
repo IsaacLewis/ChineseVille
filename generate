@@ -333,4 +333,460 @@ fi
 21:54/home/isaac/bin:./testvim test
 [?1049h[?1h=[1;32r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[32;1H"test" "test" 3L, 37C[>c[1;1Hif ["1" == "1"] ; then[2;8H echo "hi"
 fi
-[1m[34m~                                                                                               [5;1H~                                                                                               [6;1H~                                                                                               [7;1H~                                                                                               [8;1H~                                                                                               
+[1m[34m~                                                                                               [5;1H~                                                                                               [6;1H~                                                                                               [7;1H~                                                                                               [8;1H~                                                                                               [9;1H~                                                                                               [10;1H~                                                                                               [11;1H~                                                                                               [12;1H~                                                                                               [13;1H~                                                                                               [14;1H~                                                                                               [15;1H~                                                                                               [16;1H~                                                                                               [17;1H~                                                                                               [18;1H~                                                                                               [19;1H~                                                                                               [20;1H~                                                                                               [21;1H~                                                                                               [22;1H~                                                                                               [23;1H~                                                                                               [24;1H~                                                                                               [25;1H~                                                                                               [26;1H~                                                                                               [27;1H~                                                                                               [28;1H~                                                                                               [29;1H~                                                                                               [30;1H~                                                                                               [31;1H~                                                                                               [m[32;79H1,1           All[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[32;79H1,2           All[1;2H[?12l[?25h[?25l[32;79H1,3           All[1;3H[?12l[?25h[?25l [46m[[10C][m[32;79H1,4           All[1;4H[?12l[?25h[?25l[[10C][32;79H1,5           All[1;5H[?12l[?25h[?25l[32;79H1,6           All[1;6H[?12l[?25h[?25l[32;79H1,7           All[1;7H[?12l[?25h[?25l[32;79H1,8           All[1;8H[?12l[?25h[?25l[32;79H1,9           All[1;9H[?12l[?25h[?25l[32;79H1,10          All[1;10H[?12l[?25h[?25l= "1"] ; then[1;22H[K[1;10H[?12l[?25h[?25l[32;1H[K[32;1H:[?12l[?25hw[?25l:w[?12l[?25h[?25l"test" "test" 3L, 36C written[56C1,10          All"test" 3L, 36C written[32;79H[K[32;79H1,10          All[1;10H[?12l[?25h[?25l[32;1H[K[32;1H:[?12l[?25hq[?25l:q[?12l[?25h[?25l[32;1H[K[32;1H[?1l>[?12l[?25h[?1049l21:54/home/isaac/bin:vim test[2P./testvim test[2P./test
+./test: line 1: [1: command not found
+21:54/home/isaac/bin:rm test
+21:54/home/isaac/bin:cd ~/.[Kprj/cv
+22:03/home/isaac/prj/cv:git add .
+22:03/home/isaac/prj/cv:git commit -m "wpr[K[K[Kusers can select wordlists"
+Created commit cbfacbc: users can select wordlists
+ 48 files changed, 38004 insertions(+), 71 deletions(-)
+ create mode 100644 app/models/#flashcard.rb#
+ create mode 120000 app/models/.#flashcard.rb
+ create mode 100644 app/models/word_list.rb
+ create mode 100644 app/models/word_list.rb~
+ create mode 100644 app/views/flashcard/choose_list.html.erb
+ create mode 100644 app/views/flashcard/choose_list.html.erb~
+ create mode 100644 db/migrate/20100125151834_add_next_due_to_flashcards.rb
+ create mode 100644 db/migrate/20100125152007_add_efactor_to_flashcards.rb
+ create mode 100644 db/migrate/20100125152216_add_defaults_to_flashcard.rb
+ create mode 100644 db/migrate/20100125155420_change_flashcard_due_to_date_time.rb
+ create mode 100644 db/migrate/20100125155420_change_flashcard_due_to_date_time.rb~
+ create mode 100644 db/migrate/20100125203159_add_last_interval_to_flashcard.rb
+ create mode 100644 db/migrate/20100126204211_create_word_lists.rb
+ create mode 100644 db/migrate/20100126204401_add_word_list_id_to_words.rb
+ create mode 100644 db/migrate/20100126204523_add_position_to_words.rb
+ create mode 100644 db/migrate/20100126204922_add_current_list_to_users.rb
+ create mode 100644 db/migrate/20100126213059_rename_user_list_column.rb
+ create mode 100644 generate
+ create mode 100644 script/cards.rb
+ create mode 100644 script/cards.rb~
+ create mode 100644 test/fixtures/word_lists.yml
+ create mode 100644 test/fixtures/word_lists.yml~
+ create mode 100644 test/unit/word_list_test.rb
+ create mode 100644 test/unit/word_list_test.rb~
+22:03/home/isaac/prj/cv:v[Kscript [K/generate migration ChangeFlashcardDefaut[Klts
+      exists  db/migrate
+      create  db/migrate/20100126221309_change_flashcard_defaults.rb
+22:13/home/isaac/prj/cv:cd db/migrate/
+22:13/home/isaac/prj/cv/db/migrate:ls
+[00m[00m20091218145132_create_words.rb[00m
+[00m20091221121937_create_users.rb[00m
+[00m20091221122448_create_flashcards.rb[00m
+[00m20091221123628_remove_incorrect_test_from_flashcards.rb[00m
+[00m20091221123645_add_incorrect_tests_to_flashcards.rb[00m
+[00m20091224123609_create_villages.rb[00m
+[00m20091224163123_create_building_types.rb[00m
+[00m20091224164251_create_buildings.rb[00m
+[00m20091224164439_drop_number_from_buildings.rb[00m
+[00m20091224164455_add_amount_to_buildings.rb[00m
+[00m20091224174432_remove_type_from_building_type.rb[00m
+[00m20091224174502_add_bonus_type_to_building_type.rb[00m
+[00m20091224181725_remove_type_from_building_types.rb[00m
+[00m20091224181840_remove_number_from_buildings.rb[00m
+[00m20091224181840_remove_number_from_buildings.rb~[00m
+[00m20091224184627_add_cost_to_building_types.rb[00m
+[00m20091224184627_add_cost_to_building_types.rb~[00m
+[00m20091226225654_add_ration_level_to_villages.rb[00m
+[00m20091229152521_create_flashcard_tests.rb[00m
+[00m20100116180031_add_words_required_to_building_type.rb[00m
+[00m20100118222757_add_defaults_to_village.rb[00m
+[00m20100121131424_add_images_to_building_types.rb[00m
+[00m20100125151834_add_next_due_to_flashcards.rb[00m
+[00m20100125152007_add_efactor_to_flashcards.rb[00m
+[00m20100125152216_add_defaults_to_flashcard.rb[00m
+[00m20100125155420_change_flashcard_due_to_date_time.rb[00m
+[00m20100125155420_change_flashcard_due_to_date_time.rb~[00m
+[00m20100125203159_add_last_interval_to_flashcard.rb[00m
+[00m20100126204211_create_word_lists.rb[00m
+[00m20100126204401_add_word_list_id_to_words.rb[00m
+[00m20100126204523_add_position_to_words.rb[00m
+[00m20100126204922_add_current_list_to_users.rb[00m
+[00m20100126213059_rename_user_list_column.rb[00m
+[00m20100126221309_change_flashcard_defaults.rb[00m
+[m22:13/home/isaac/prj/cv/db/migrate:vim *chamn[K[Knge*
+3 files to edit
+[?1049h[?1h=[1;32r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[32;1H"20100125155420_change_flashcard_due_to_date_time.rb" "20100125155420_change_flashcard_due_to_date_time.rb" 9L, 208C[>c[1;1H[35mclass[m [32mChangeFlashcardDueToDateTime[m < [32mActiveRecord[m::[32mMigration[m
+  [35mdef[m [31mself[m.[36mup[m
+    change_column [31m:flashcards[m, [31m:next_due[m, [31m:datetime[m
+  [35mend[m
+
+  [35mdef[m [31mself[m.[36mdown[m
+    change_column [31m:flashcards[m, [31m:next_due[m, [31m:time[m
+  [35mend
+end[m
+[1m[34m~                                                                                               [11;1H~                                                                                               [12;1H~                                                                                               [13;1H~                                                                                               [14;1H~                                                                                               [15;1H~                                                                                               [16;1H~                                                                                               [17;1H~                                                                                               [18;1H~                                                                                               [19;1H~                                                                                               [20;1H~                                                                                               [21;1H~                                                                                               [22;1H~                                                                                               [23;1H~                                                                                               [24;1H~                                                                                               [25;1H~                                                                                               [26;1H~                                                                                               [27;1H~                                                                                               [28;1H~                                                                                               [29;1H~                                                                                               [30;1H~                                                                                               [31;1H~                                                                                               [m[32;79H1,1           All[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[32;1H[K[32;1H:[?12l[?25hq[?25l:q[?12l[?25h[?25l[1m[37m[41mE173: 2 more files to edit[m[52C1,1           All[1;1H[?12l[?25h[?25l[32;1H[K[32;1H:[?12l[?25hq[?25l:q[?12l[?25h[?25l[32;1H[K[32;1H[?1l>[?12l[?25h[?1049l22:13/home/isaac/prj/cv/db/migrate:vim 20100126221309_change_flashcard_defaults.rb 
+[?1049h[?1h=[1;32r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[32;1H"20100126221309_change_flashcard_defaults.rb" "20100126221309_change_flashcard_defaults.rb" 7L, 103C[>c[1;1H[35mclass[m [32mChangeFlashcardDefaults[m < [32mActiveRecord[m::[32mMigration[m
+  [35mdef[m [31mself[m.[36mup[m
+  [35mend[m
+
+  [35mdef[m [31mself[m.[36mdown[m
+  [35mend
+end[m
+[1m[34m~                                                                                               [9;1H~                                                                                               [10;1H~                                                                                               [11;1H~                                                                                               [12;1H~                                                                                               [13;1H~                                                                                               [14;1H~                                                                                               [15;1H~                                                                                               [16;1H~                                                                                               [17;1H~                                                                                               [18;1H~                                                                                               [19;1H~                                                                                               [20;1H~                                                                                               [21;1H~                                                                                               [22;1H~                                                                                               [23;1H~                                                                                               [24;1H~                                                                                               [25;1H~                                                                                               [26;1H~                                                                                               [27;1H~                                                                                               [28;1H~                                                                                               [29;1H~                                                                                               [30;1H~                                                                                               [31;1H~                                                                                               [m[32;79H1,1           All[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[32;79H2,1           All[2;1H[?12l[?25h[?25l[32;79H3,1           All[3;1H[?12l[?25h[?25l[32;79H2,1           All[2;1H[?12l[?25h[?25l[32;79H2,13          All[2;13H[?12l[?25h[?25l[32;1H[1m-- INSERT --[m[32;13H[K[32;79H2,14          All[2;14H[?12l[?25h[?25l[3;31r[3;1H[L[1;32r[32;1H[1m-- INSERT --[m[32;79H[K[32;79H3,1           All[3;1H[?12l[?25h[?25l[32;79H3,2           All[3;2H[?12l[?25h[?25l[32;79H3,3           All[3;3H[?12l[?25h[?25l[32;79H3,4           All[3;4H[?12l[?25h[?25l[32;79H3,5           All[3;5H[?12l[?25h[?25l c[32;79H3,6           All[3;6H[?12l[?25h[?25lch[32;79H3,7           All[3;7H[?12l[?25h[?25lha[32;79H3,8           All[3;8H[?12l[?25h[?25lan[32;79H3,9           All[3;9H[?12l[?25h[?25lng[32;79H3,10          All[3;10H[?12l[?25h[?25lge[32;79H3,11          All[3;11H[?12l[?25h[?25le_[32;79H3,12          All[3;12H[?12l[?25h[?25l_c[32;79H3,13          All[3;13H[?12l[?25h[?25lco[32;79H3,14          All[3;14H[?12l[?25h[?25lol[32;79H3,15          All[3;15H[?12l[?25h[?25llu[32;79H3,16          All[3;16H[?12l[?25h[?25lum[32;79H3,17          All[3;17H[?12l[?25h[?25lmn[32;79H3,18          All[3;18H[?12l[?25h[?25l[32;79H3,19          All[3;19H[?12l[?25h[?25l :[32;79H3,20          All[3;20H[?12l[?25h[?25l[31m:c[m[32;79H3,21          All[3;21H[?12l[?25h[?25l[31mco[m[32;79H3,22          All[3;22H[?12l[?25h[?25l[31mor[m[32;79H3,23          All[3;23H[?12l[?25h[?25l[31mrr[m[32;79H3,24          All[3;24H[?12l[?25h[?25l[31mre[m[32;79H3,25          All[3;25H[?12l[?25h[?25l[31mec[m[32;79H3,26          All[3;26H[?12l[?25h[?25l[31mct[m[32;79H3,27          All[3;27H[?12l[?25h[?25l[31mt_[m[32;79H3,28          All[3;28H[?12l[?25h[?25l[31m_t[m[32;79H3,29          All[3;29H[?12l[?25h[?25l[31mte[m[32;79H3,30          All[3;30H[?12l[?25h[?25l[31mes[m[32;79H3,31          All[3;31H[?12l[?25h[?25l[31mst[m[32;79H3,32          All[3;32H[?12l[?25h[?25l[31mts[m[32;79H3,33          All[3;33H[?12l[?25h[?25l[31ms[m,[32;79H3,34          All[3;34H[?12l[?25h[?25l[32;79H3,35          All[3;35H[?12l[?25h[?25l :[32;79H3,36          All[3;36H[?12l[?25h[?25l[31m:i[m[32;79H3,37          All[3;37H[?12l[?25h[?25l[31min[m[32;79H3,38          All[3;38H[?12l[?25h[?25l[31mnt[m[32;79H3,39          All[3;39H[?12l[?25h[?25l[31mte[m[32;79H3,40          All[3;40H[?12l[?25h[?25l[31meg[m[32;79H3,41          All[3;41H[?12l[?25h[?25l[31mge[m[32;79H3,42          All[3;42H[?12l[?25h[?25l[31mer[m[32;79H3,43          All[3;43H[?12l[?25h[?25l[31mr[m,[32;79H3,44          All[3;44H[?12l[?25h[?25l[32;79H3,45          All[3;45H[?12l[?25h[32;1H[K[3;44H[?25l[32;79H3,44          All[3;44H[?12l[?25h[?25l[32;79H[K[32;1H:[?12l[?25h[?25l:q:q[?12l[?25h[?25l:w:w[?12l[?25h[?25l:q!:q![?12l[?25h[?25l:2[32;3H[K[32;1H:2[?12l[?25h[?25l:e:e[?12l[?25h[?25l:Q:Q[?12l[?25h[?25l:r:r[?12l[?25h[?25l:qw:qw[?12l[?25h[?25l:q[32;3H[K[32;1H:q[?12l[?25h[?25l:[32;2H[K[32;1H:[?12l[?25h [?25l[77C3,44          All[3;44H[?12l[?25h[?25l[32;79H3,43          All[3;43H[?12l[?25h[?25l[32;79H3,42          All[3;42H[?12l[?25h[?25l[32;79H3,41          All[3;41H[?12l[?25h[?25l[32;79H3,40          All[3;40H[?12l[?25h[?25l[32;79H3,39          All[3;39H[?12l[?25h[?25l[32;79H3,38          All[3;38H[?12l[?25h[?25l[32;79H3,37          All[3;37H[?12l[?25h[?25l[32;79H3,36          All[3;36H[?12l[?25h[?25l[32;79H3,35          All[3;35H[?12l[?25h[?25l[32;79H3,34          All[3;34H[?12l[?25h[?25l[32;79H3,33          All[3;33H[?12l[?25h[?25l[32;79H3,32          All[3;32H[?12l[?25h[?25l[32;79H3,31          All[3;31H[?12l[?25h[?25l[32;79H3,30          All[3;30H[?12l[?25h[?25l[32;79H3,29          All[3;29H[?12l[?25h[?25l[32;79H3,28          All[3;28H[?12l[?25h[?25l[32;79H3,27          All[3;27H[?12l[?25h[?25l[32;79H3,26          All[3;26H[?12l[?25h[?25l[32;79H3,25          All[3;25H[?12l[?25h[?25l[32;79H3,24          All[3;24H[?12l[?25h[?25l[32;79H3,23          All[3;23H[?12l[?25h[?25l[32;79H3,22          All[3;22H[?12l[?25h[?25l[32;79H3,21          All[3;21H[?12l[?25h[?25l[32;79H3,20          All[3;20H[?12l[?25h[?25l[32;79H3,19          All[3;19H[?12l[?25h[?25l[32;1H[1m-- INSERT --[m[32;79H[K[32;79H3,19          All[3;19H[?12l[?25h[?25l::correct_tests, [31m:integer[m,[32;79H3,20          All[3;20H[?12l[?25h[?25l[31m:f:correct_tests[m, [31m:integer[m,[32;79H3,21          All[3;21H[?12l[?25h[?25l[31mfl:correct_tests[m, [31m:integer[m,[32;79H3,22          All[3;22H[?12l[?25h[?25l[31mla:correct_tests[m, [31m:integer[m,[32;79H3,23          All[3;23H[?12l[?25h[?25l[31mas:correct_tests[m, [31m:integer[m,[32;79H3,24          All[3;24H[?12l[?25h[?25l[31msh:correct_tests[m, [31m:integer[m,[32;79H3,25          All[3;25H[?12l[?25h[?25l[31mhc:correct_tests[m, [31m:integer[m,[32;79H3,26          All[3;26H[?12l[?25h[?25l[31mca:correct_tests[m, [31m:integer[m,[32;79H3,27          All[3;27H[?12l[?25h[?25l[31mar:correct_tests[m, [31m:integer[m,[32;79H3,28          All[3;28H[?12l[?25h[?25l[31mrd:correct_tests[m, [31m:integer[m,[32;79H3,29          All[3;29H[?12l[?25h[?25l[31md[m,[31m:correct_tests[m, [31m:integer[m,[32;79H3,30          All[3;30H[?12l[?25h[?25l, [31m:correct_tests[m, [31m:integer[m,[32;79H3,31          All[3;31H[?12l[?25h[?25l[32;79H3,57          All[3;57H[?12l[?25h[?25l :[32;79H3,58          All[3;58H[?12l[?25h[?25l[31m:d[m[32;79H3,59          All[3;59H[?12l[?25h[?25l[31mde[m[32;79H3,60          All[3;60H[?12l[?25h[?25l[31mef[m
+  end[32;79H3,61          All[3;61H[?12l[?25h[?25l[31mfa[m
+  [35mend[m[32;79H3,62          All[3;62H[?12l[?25h[?25l[31mau[m[32;79H3,63          All[3;63H[?12l[?25h[?25l[31mul[m[32;79H3,64          All[3;64H[?12l[?25h[?25l[31mlt[m[32;79H3,65          All[3;65H[?12l[?25h[?25l[32;79H3,66          All[3;66H[?12l[?25h[?25l =[32;79H3,67          All[3;67H[?12l[?25h[?25l=>[32;79H3,68          All[3;68H[?12l[?25h[?25l[32;79H3,69          All[3;69H[?12l[?25h[?25l [31m0[m[32;79H3,70          All[3;70H[?12l[?25h[32;1H[K[3;69H[?25l[32;79H3,69          All[3;69H[?12l[?25h[?25l[32;79H[K[32;1H:[?12l[?25hw[?25l:w[?12l[?25h[?25l"20100126221309_change_flashcard_defaults.rb" "20100126221309_change_flashcard_defaults.rb" 8L, 173C written[16C3,69          All"20100126221309_change_flashcard_defaults.rb" 8L, 173C written[32;79H[K[32;79H3,69          All[3;69H[?12l[?25h[?25l[32;79H3,1           All[3;1H[?12l[?25h[?25l[32;79H4,1           All[4;1H[?12l[?25h[?25l[32;79H5,0-1         All[5;1H[?12l[?25h[?25l[32;79H6,1           All[6;1H[?12l[?25h[?25l[32;79H5,0-1         All[5;1H[?12l[?25h[?25l[32;79H4,1           All[4;1H[?12l[?25h[?25l[32;79H3,1           All[3;1H[?12l[?25h[?25l[32;79H3,69          All[3;69H[?12l[?25h[?25l[4;31r[4;1H[L[1;32r[4;4H change_column [31m:flashcard[m, [31m:correct_tests[m, [31m:integer[m, [31m:default[m => [31m0[m[32;1H[K[32;79H4,5           All[4;5H[?12l[?25h[?25l[5;31r[5;1H[L[1;32r[5;4H change_column [31m:flashcard[m, [31m:correct_tests[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H[K[32;79H5,5           All[5;5H[?12l[?25h[?25l[32;79H4,5           All[4;5H[?12l[?25h[?25l[32;79H4,6           All[4;6H[?12l[?25h[?25l[32;79H4,7           All[4;7H[?12l[?25h[?25l[32;79H4,8           All[4;8H[?12l[?25h[?25l[32;79H4,9           All[4;9H[?12l[?25h[?25l[32;79H4,10          All[4;10H[?12l[?25h[?25l[32;79H4,11          All[4;11H[?12l[?25h[?25l[32;79H4,12          All[4;12H[?12l[?25h[?25l[32;79H4,13          All[4;13H[?12l[?25h[?25l[32;79H4,14          All[4;14H[?12l[?25h[?25l[32;79H4,15          All[4;15H[?12l[?25h[?25l[32;79H4,16          All[4;16H[?12l[?25h[?25l[32;79H4,17          All[4;17H[?12l[?25h[?25l[32;79H4,18          All[4;18H[?12l[?25h[?25l[32;79H4,19          All[4;19H[?12l[?25h[?25l[32;79H4,20          All[4;20H[?12l[?25h[?25l[32;79H4,21          All[4;21H[?12l[?25h[?25l[32;79H4,22          All[4;22H[?12l[?25h[?25l[32;79H4,23          All[4;23H[?12l[?25h[?25l[32;79H4,24          All[4;24H[?12l[?25h[?25l[32;79H4,25          All[4;25H[?12l[?25h[?25l[32;79H4,26          All[4;26H[?12l[?25h[?25l[32;79H4,27          All[4;27H[?12l[?25h[?25l[32;79H4,28          All[4;28H[?12l[?25h[?25l[32;79H4,29          All[4;29H[?12l[?25h[?25l[32;79H4,30          All[4;30H[?12l[?25h[?25l[32;79H4,31          All[4;31H[?12l[?25h[?25l[32;79H4,32          All[4;32H[?12l[?25h[?25l[32;1H[1m-- INSERT --[m[32;79H[K[32;79H4,32          All[4;32H[?12l[?25h[?25l[31m:icorrect_tests[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H4,33          All[4;33H[?12l[?25h[?25l[31mincorrect_tests[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H4,34          All[4;34H[?12l[?25h[?25l[32;79H5,34          All[5;34H[?12l[?25h[?25l[32;79H5,33          All[5;33H[?12l[?25h[?25l[32;79H5,32          All[5;32H[?12l[?25h[?25l[31m:dcorrect_tests[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,33          All[5;33H[?12l[?25h[?25l[31mdwcorrect_tests[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,34          All[5;34H[?12l[?25h[?25l[31mdcorrect_tests[m, [31m:integer[m, [31m:default[m => [31m0[m[5;71H[K[32;79H5,33          All[5;33H[?12l[?25h[?25l[31m:correct_tests[m, [31m:integer[m, [31m:default[m => [31m0[m[5;70H[K[32;79H5,32          All[5;32H[?12l[?25h[32;1H[K[5;31H[?25l[32;79H5,31          All[5;31H[?12l[?25h[?25l correct_tests, [31m:integer[m, [31m:default[m => [31m0[m[5;69H[K[5;31H[?12l[?25h[?25l , [31m:integer[m, [31m:default[m => [31m0[m[5;56H[K[5;31H[?12l[?25h[?25l[32;1H[1m-- INSERT --[m[32;79H[K[32;79H5,31          All[5;31H[?12l[?25h[?25l :, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,32          All[5;32H[?12l[?25h[?25l[31m:k[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,33          All[5;33H[?12l[?25h[?25l[31mkn[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,34          All[5;34H[?12l[?25h[?25l[31mno[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,35          All[5;35H[?12l[?25h[?25l[31mow[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,36          All[5;36H[?12l[?25h[?25l[31mwl[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,37          All[5;37H[?12l[?25h[?25l[31mle[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,38          All[5;38H[?12l[?25h[?25l[31med[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,39          All[5;39H[?12l[?25h[?25l[31mdg[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,40          All[5;40H[?12l[?25h[?25l[31mge[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,41          All[5;41H[?12l[?25h[?25l[31me_[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,42          All[5;42H[?12l[?25h[?25l[31m_c[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,43          All[5;43H[?12l[?25h[?25l[31mch[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,44          All[5;44H[?12l[?25h[?25l[31mha[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,45          All[5;45H[?12l[?25h[?25l[31man[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,46          All[5;46H[?12l[?25h[?25l[31mnc[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,47          All[5;47H[?12l[?25h[?25l[31mce[m, [31m:integer[m, [31m:default[m => [31m0[m[32;79H5,48          All[5;48H[?12l[?25h[?25l[32;79H5,73          All[5;73H[?12l[?25h[32;1H[K[5;72H[?25l[32;79H5,72          All[5;72H[?12l[?25h[?25l[32;79H[K[32;1H:[?12l[?25hw[?25l:w[?12l[?25h[?25l"20100126221309_change_flashcard_defaults.rb" "20100126221309_change_flashcard_defaults.rb" 10L, 318C written[15C5,72          All"20100126221309_change_flashcard_defaults.rb" 10L, 318C written[32;79H[K[32;79H5,72          All[5;72H[?12l[?25h[?25l[32;79H4,71          All[4;71H[?12l[?25h[?25l[32;79H3,69          All[3;69H[?12l[?25h[?25l[32;79H3,1           All[3;1H[?12l[?25h[?25l[32;1H3 lines yanked[32;15H[K[32;79H3,1           All[3;1H[?12l[?25h[?25l[32;79H4,1           All[4;1H[?12l[?25h[?25l[32;79H5,1           All[5;1H[?12l[?25h[?25l[32;79H6,1           All[6;1H[?12l[?25h[?25l[32;79H7,0-1         All[7;1H[?12l[?25h[?25l[32;79H8,1           All[8;1H[?12l[?25h[?25l[32;79H8,15          All[8;15H[?12l[?25h[?25l[32;1H3 more lines[32;13H[K[9;31r[9;1H[3L[1;32r[9;4H change_column [31m:flashcard[m, [31m:correct_tests[m, [31m:integer[m, [31m:default[m => [31m0[m
+    change_column [31m:flashcard[m, [31m:incorrect_tests[m, [31m:integer[m, [31m:default[m => [31m0[m
+    change_column [31m:flashcard[m, [31m:knowledge_chance[m, [31m:integer[m, [31m:default[m => [31m0[m[32;1H[K[32;79H9,5           All3 more lines[32;79H[K[32;79H9,5           All[9;5H[?12l[?25h[?25l[32;79H9,6           All[9;6H[?12l[?25h[?25l[32;79H9,69          All[9;69H[?12l[?25h[?25l[32;79H9,68          All[9;68H[?12l[?25h[?25l[32;79H9,67          All[9;67H[?12l[?25h[?25l[32;79H9,66          All[9;66H[?12l[?25h[?25l[32;79H9,65          All[9;65H[?12l[?25h[?25l[32;79H9,64          All[9;64H[?12l[?25h[?25l[32;79H9,63          All[9;63H[?12l[?25h[?25l[32;79H9,62          All[9;62H[?12l[?25h[?25l[32;79H9,61          All[9;61H[?12l[?25h[?25l[32;79H9,60          All[9;60H[?12l[?25h[?25l[32;79H9,59          All[9;59H[?12l[?25h[?25l[32;79H9,58          All[9;58H[?12l[?25h[?25l[32;79H9,57          All[9;57H[?12l[?25h[?25l[32;79H9,56          All[9;56H[?12l[?25h[?25l[32;79H9,55          All[9;55H[?12l[?25h[?25l[9;55H[K[32;79H9,54          All[9;54H[?12l[?25h[?25l[32;79H10,54         All[10;54H[?12l[?25h[?25l[32;79H10,55         All[10;55H[?12l[?25h[?25l[32;79H10,56         All[10;56H[?12l[?25h[?25l[32;79H10,57         All[10;57H[?12l[?25h[?25l[10;57H[K[32;79H10,56         All[10;56H[?12l[?25h[?25l[32;79H11,56         All[11;56H[?12l[?25h[?25l[32;79H11,57         All[11;57H[?12l[?25h[?25l[32;79H11,58         All[11;58H[?12l[?25h[?25l[11;58H[K[32;79H11,57         All[11;57H[?12l[?25h[?25l[32;1H[K[32;1H:[?12l[?25hw[?25l:w[?12l[?25h[?25l"20100126221309_change_flashcard_defaults.rb" "20100126221309_change_flashcard_defaults.rb" 13L, 488C written[15C11,57         All"20100126221309_change_flashcard_defaults.rb" 13L, 488C written[32;79H[K[32;79H11,57         All[11;57H[?12l[?25h[?25l[32;1H[K[32;1H:[?12l[?25hq[?25l:q[?12l[?25h[?25l[32;1H[K[32;1H[?1l>[?12l[?25h[?1049l22:15/home/isaac/prj/cv/db/migrate:cd ../..
+22:15/home/isaac/prj/cv:rake db:migrate
+(in /home/isaac/prj/cv)
+==  ChangeFlashcardDefaults: migrating ========================================
+-- change_column(:flashcard, :correct_tests, :integer, {:default=>0})
+rake aborted!
+An error has occurred, this and all later migrations canceled:
+
+Could not find table 'flashcard'
+
+(See full trace by running task with --trace)
+22:15/home/isaac/prj/cv:rake db:migrate[7Pcd ../..vim 20100126221309_change_flashcard_defaults.rb 
+[?1049h[?1h=[1;32r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[32;1H"20100126221309_change_flashcard_defaults.rb" [New File][>c[2;1H[1m[34m~                                                                                               [3;1H~                                                                                               [4;1H~                                                                                               [5;1H~                                                                                               [6;1H~                                                                                               [7;1H~                                                                                               [8;1H~                                                                                               [9;1H~                                                                                               [10;1H~                                                                                               [11;1H~                                                                                               [12;1H~                                                                                               [13;1H~                                                                                               [14;1H~                                                                                               [15;1H~                                                                                               [16;1H~                                                                                               [17;1H~                                                                                               [18;1H~                                                                                               [19;1H~                                                                                               [20;1H~                                                                                               [21;1H~                                                                                               [22;1H~                                                                                               [23;1H~                                                                                               [24;1H~                                                                                               [25;1H~                                                                                               [26;1H~                                                                                               [27;1H~                                                                                               [28;1H~                                                                                               [29;1H~                                                                                               [30;1H~                                                                                               [31;1H~                                                                                               [m[32;79H0,0-1         All[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[32;1H[K[32;1H:[?12l[?25hq[?25l:q[?12l[?25h[?25l[32;1H[K[32;1H[?1l>[?12l[?25h[?1049l22:16/home/isaac/prj/cv:cd db/migrate/
+22:16/home/isaac/prj/cv/db/migrate:cd db/migrate/vim 20100126221309_change_flashcard_defaults.rb 
+[?1049h[?1h=[1;32r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[32;1H"20100126221309_change_flashcard_defaults.rb" "20100126221309_change_flashcard_defaults.rb" 13L, 488C[>c[1;1H[35mclass[m [32mChangeFlashcardDefaults[m < [32mActiveRecord[m::[32mMigration[m
+  [35mdef[m [31mself[m.[36mup[m
+    change_column [31m:flashcard[m, [31m:correct_tests[m, [31m:integer[m, [31m:default[m => [31m0[m
+    change_column [31m:flashcard[m, [31m:incorrect_tests[m, [31m:integer[m, [31m:default[m => [31m0[m
+    change_column [31m:flashcard[m, [31m:knowledge_chance[m, [31m:integer[m, [31m:default[m => [31m0[m
+  [35mend[m
+
+  [35mdef[m [31mself[m.[36mdown[m
+    change_column [31m:flashcard[m, [31m:correct_tests[m, [31m:integer[m
+    change_column [31m:flashcard[m, [31m:incorrect_tests[m, [31m:integer[m
+    change_column [31m:flashcard[m, [31m:knowledge_chance[m, [31m:integer[m
+  [35mend
+end[m
+[1m[34m~                                                                                               [15;1H~                                                                                               [16;1H~                                                                                               [17;1H~                                                                                               [18;1H~                                                                                               [19;1H~                                                                                               [20;1H~                                                                                               [21;1H~                                                                                               [22;1H~                                                                                               [23;1H~                                                                                               [24;1H~                                                                                               [25;1H~                                                                                               [26;1H~                                                                                               [27;1H~                                                                                               [28;1H~                                                                                               [29;1H~                                                                                               [30;1H~                                                                                               [31;1H~                                                                                               [m[32;79H1,1           All[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[32;79H2,1           All[2;1H[?12l[?25h[?25l[32;79H3,1           All[3;1H[?12l[?25h[?25l[32;79H2,1           All[2;1H[?12l[?25h[?25l[32;79H3,1           All[3;1H[?12l[?25h[?25l[32;79H3,2           All[3;2H[?12l[?25h[?25l[32;79H3,3           All[3;3H[?12l[?25h[?25l[32;79H3,4           All[3;4H[?12l[?25h[?25l[32;79H3,5           All[3;5H[?12l[?25h[?25l[32;79H3,6           All[3;6H[?12l[?25h[?25l[32;79H3,7           All[3;7H[?12l[?25h[?25l[32;79H3,8           All[3;8H[?12l[?25h[?25l[32;79H3,9           All[3;9H[?12l[?25h[?25l[32;79H3,10          All[3;10H[?12l[?25h[?25l[32;79H3,11          All[3;11H[?12l[?25h[?25l[32;79H3,12          All[3;12H[?12l[?25h[?25l[32;79H3,13          All[3;13H[?12l[?25h[?25l[32;79H3,14          All[3;14H[?12l[?25h[?25l[32;79H3,15          All[3;15H[?12l[?25h[?25l[32;79H3,16          All[3;16H[?12l[?25h[?25l[32;1H[K[32;1H:[?12l[?25h%[?25l:%[?12l[?25hs[?25l:%s[?12l[?25h/[?25l:%s/[?12l[?25hc[?25l:%s/c[?12l[?25ha[?25l:%s/ca[?12l[?25hr[?25l:%s/car[?12l[?25hd[?25l:%s/card[?12l[?25h/[?25l:%s/card/[?12l[?25hc[?25l:%s/card/c[?12l[?25ha[?25l:%s/card/ca[?12l[?25hr[?25l:%s/card/car[?12l[?25hd[?25l:%s/card/card[?12l[?25hs[?25l:%s/card/cards[?12l[?25h/[?25l:%s/card/cards/[?12l[?25hg[?25l:%s/card/cards/g[?12l[?25hc[?25l:%s/card/cards/gc[?12l[?25h[?25l[1;18H[7m[32mcard[m[32;79H1,18          All[32mreplace with cards (y/n/a/q/l/^E/^Y)?[m[32;79H[K[32;79H1,18          All[32;38H[?12l[?25h[?25l[32;1H[K[32;1H[1;18H[32mcard[m[3;25H[7m[31mcard[m[32;79H3,25          All[32mreplace with cards (y/n/a/q/l/^E/^Y)?[m[32;79H[K[32;79H3,25          All[32;38H[?12l[?25h[?25l[32;1H[K[32;1H[3;25H[31mcards[m, [31m:correct_tests[m, [31m:integer[m, [31m:default[m => [31m0[m[4;25H[7m[31mcard[m[32;79H4,25          All[32mreplace with cards (y/n/a/q/l/^E/^Y)?[m[32;79H[K[32;79H4,25          All[32;38H[?12l[?25h[?25l[32;1H[K[32;1H[4;25H[31mcards[m, [31m:incorrect_tests[m, [31m:integer[m, [31m:default[m => [31m0[m[5;25H[7m[31mcard[m[32;79H5,25          All[32mreplace with cards (y/n/a/q/l/^E/^Y)?[m[32;79H[K[32;79H5,25          All[32;38H[?12l[?25h[?25l[32;1H[K[32;1H[5;25H[31mcards[m, [31m:knowledge_chance[m, [31m:integer[m, [31m:default[m => [31m0[m[9;25H[7m[31mcard[m[32;79H9,25          All[32mreplace with cards (y/n/a/q/l/^E/^Y)?[m[32;79H[K[32;79H9,25          All[32;38H[?12l[?25h[?25l[32;1H[K[32;1H[9;25H[31mcards[m, [31m:correct_tests[m, [31m:integer[m[10;25H[7m[31mcard[m[32;79H10,25         All[32mreplace with cards (y/n/a/q/l/^E/^Y)?[m[32;79H[K[32;79H10,25         All[32;38H[?12l[?25h[?25l[32;1H[K[32;1H[10;25H[31mcards[m, [31m:incorrect_tests[m, [31m:integer[m[11;25H[7m[31mcard[m[32;79H11,25         All[32mreplace with cards (y/n/a/q/l/^E/^Y)?[m[32;79H[K[32;79H11,25         All[32;38H[?12l[?25h[?25l[32;1H[K[32;1H6 substitutions on 6 lines[11;25H[31mcards[m, [31m:knowledge_chance[m, [31m:integer[m[32;79H11,5          All6 substitutions on 6 lines[32;79H[K[32;79H11,5          All[11;5H[?12l[?25h[?25l[32;79H11,5          All[11;5H[?12l[?25h[?25l[32;1H[K[32;1H:[?12l[?25hw[?25l:w[?12l[?25h[?25l"20100126221309_change_flashcard_defaults.rb" "20100126221309_change_flashcard_defaults.rb" 13L, 494C written[15C11,5          All"20100126221309_change_flashcard_defaults.rb" 13L, 494C written[32;79H[K[32;79H11,5          All[11;5H[?12l[?25h[?25l[32;1H[K[32;1H:[?12l[?25hq[?25l:q[?12l[?25h[?25l[32;1H[K[32;1H[?1l>[?12l[?25h[?1049l22:16/home/isaac/prj/cv/db/migrate:cd ../..
+22:17/home/isaac/prj/cv:cd ../..vim 20100126221309_change_flashcard_defaults.rb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd db/migrate/[Kvim 20100126221309_change_flashcard_defaults.rb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crake db:migrate[K
+(in /home/isaac/prj/cv)
+==  ChangeFlashcardDefaults: migrating ========================================
+-- change_column(:flashcards, :correct_tests, :integer, {:default=>0})
+   -> 0.0676s
+-- change_column(:flashcards, :incorrect_tests, :integer, {:default=>0})
+   -> 0.0441s
+-- change_column(:flashcards, :knowledge_chance, :integer, {:default=>0})
+   -> 0.0454s
+==  ChangeFlashcardDefaults: migrated (0.1578s) ===============================
+
+22:17/home/isaac/prj/cv:irb
+irb(main):001:0> load ^C
+irb(main):001:0> ^C
+irb(main):001:0> 22:43/home/isaac/prj/cv:cd script/
+22:43/home/isaac/prj/cv/script:irb
+irb(main):001:0> load 'cards.rb'
+=> true
+irb(main):002:0> parse $line
+=> ["一", "yī", ["one", "1", "single", "a (article)", "as soon as", "entire", "whole", "all", "throughout"]]
+irb(main):003:0> parse $line
+=> ["一", "yī", ["one", "1", "single", "a (article)", "as soon as", "entire", "whole", "all", "throughout"]]
+irb(main):004:0> parse $line[Kparse $lineload 'cards.rb'
+=> true
+irb(main):005:0> load 'cards.rb'[4Pparse $line
+=> ["一", "yī", "㊀ one㊁ 1㊂ single㊃ a (article)㊄ as soon as㊅ entire㊆ whole㊇ all㊈ throughout"]
+irb(main):006:0> parse $lineload 'cards.rb'
+=> true
+irb(main):007:0> load 'cards.rb'[4Pparse $line
+=> ["一", "yī", "; one; ;; single; a ;article;; as soon as; entire; whole; all; throughout"]
+irb(main):008:0> parse $lineload 'cards.rb'
+=> true
+irb(main):009:0> load 'cards.rb'[4Pparse $line
+=> ["一", "yī", "; one; ;; single; a ;article;; as soon as; entire; whole; all; throughout"]
+irb(main):010:0> parse $lineload 'cards.rb'
+=> true
+irb(main):011:0> load 'cards.rb'[4Pparse $line
+=> ["一", "yī", "; one; ;; single; a ;article;; as soon as; entire; whole; all; throughout"]
+irb(main):012:0> /\(/h/\(/u/\(/[1P/\(/i/\(/./\(/s/\(/u/\(/b/\(/ /\(/[C[C[C[C, [1P[1P[1@"[1@h[1@i[1@([1@s[1@o[1@"[C[C[C[C[C[C[C[C[C[C[C'mo'
+=> "himoso"
+irb(main):013:0> "hi can you go".split(' '[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3P(so".sub /\(/, 'mo' can you go".split(' ').[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[1,2,3]/[K.find 2
+=> #<Enumerable::Enumerator:0xb7b35b20>
+irb(main):014:0> [1,2,3].find 2[1P2[1P2[1P2[1P2[1P2c2o2t2[1P2[1P2[C[K[K[K[K[K[K[K[K[K[K[[K"hi can yu[Kou go".split [K(' ').include? 'can'
+=> true
+irb(main):015:0> "hi can you go".split(' ').include? 'can'[1P'
+=> false
+irb(main):016:0> "hi can you go".split(' ').include? 'ca'[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kanswe [Kr = "blue green"
+=> "blue green"
+irb(main):017:0> "the sky is blue".split 0 [K[K- answer.split
+=> ["the", "sky", "is"]
+irb(main):018:0> "the sky is blue".split - answer.split[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kintersce[K[Kection answer
+NoMethodError: undefined method `intersection' for "the sky is blue":String
+	from (irb):18
+irb(main):019:0> "the sky is blue".intersection answer[Ksplit - answer.split[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17Panswer = "blue green"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"hi can you go".split(' ').include? 'ca'n'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[27P[1,2,3].find 2"hi(so".sub /\(/, 'mo'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pparse $lineload 'cards.rb'
+=> true
+irb(main):020:0> load 'cards.rb'"the sky is blue".intersection answesplit - answer.split[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17Panswer = "blue green"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"hi can you go".split(' ').include? 'ca'n'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[27P[1,2,3].find 2"hi(so".sub /\(/, 'mo'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pparse $lineload 'cards.rb'[4Pparse $line
+=> ["一", "yī", "; one; ;; single; a (article); as soon as; entire; whole; all; throughout"]
+irb(main):021:0> parse $lineload 'cards.rb'
+=> true
+irb(main):022:0> load 'cards.rb'[4Pparse $line
+=> ["一", "yī", "㊀ one㊁ 1㊂ single㊃ a (article)㊄ as soon as㊅ entire㊆ whole㊇ all㊈ throughout"]
+irb(main):023:0> parse $lineload 'cards.rb'
+=> true
+irb(main):024:0> load 'cards.rb'[4Pparse $line
+=> ["一", "yī", "㊀ one㊁ 1㊂ single㊃ a (article)㊄ as soon as㊅ entire㊆ whole㊇ all㊈ throughout"]
+irb(main):025:0> parse $lineload 'cards.rb'
+=> true
+irb(main):026:0> load 'cards.rb'[4Pparse $line
+=> ["一", "yī", "; one; ; single; a (article); as soon as; entire; whole; all; throughout"]
+irb(main):027:0> parse $lineload 'cards.rb'
+=> true
+irb(main):028:0> load 'cards.rb'[4Pparse $line
+=> ["一", "yī", "one; ; single; a (article); as soon as; entire; whole; all; throughout"]
+irb(main):029:0> parse $lineflineiline[Clineeline.linerlineelinealinedline
+=> ["<span style=\"color:#a4a4a4;\">㊀ one<br /><span style=\"color:#a4a4a4;\">㊁</span> 1<br /><span style=\"color:#a4a4a4;\">㊂</span> single<br /><span style=\"color:#a4a4a4;\">㊃</span> a (article)<br /><span style=\"color:#a4a4a4;\">㊄</span> as soon as<br /><span style=\"color:#a4a4a4;\">㊅</span> entire<br /><span style=\"color:#a4a4a4;\">㊆</span> whole<br /><span style=\"color:#a4a4a4;\">㊇</span> all<br /><span style=\"color:#a4a4a4;\">㊈</span> throughout</span>", "一", "y;"]
+irb(main):030:0> parse $file.readline
+=> ["二", "èr", "two; ;"]
+irb(main):031:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ two<br /><span style=\"color:#a4a4a4;\">㊁</span> 2</span>", "二", "r"]
+irb(main):032:0> parse $file.readline
+=> ["三", "sān", "three; ;"]
+irb(main):033:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ three<br /><span style=\"color:#a4a4a4;\">㊁</span> 3</span>", "三", "s;n"]
+irb(main):034:0> parse $file.readline
+=> ["十", "shí", "ten; ;"]
+irb(main):035:0> parse $file.readline[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kload ;c[K[K;c[K[K'cards.rb'
+=> true
+irb(main):036:0> load 'cards.rb'parse $file.readline[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kparse $lineload 'cards.rb'[4Pparse $lineload 'cards.rb'[4Pparse $lineload 'cards.rb'[4Pparse $lineload 'cards.rb'[4Pparse $line
+=> ["一", "yī", "one; ; single; a (article); as soon as; entire; whole; all; throughout"]
+irb(main):037:0> parse $lineflineiline[Clineeline.linerlineelinealinedline
+=> ["<span style=\"color:#a4a4a4;\">㊀ one<br /><span style=\"color:#a4a4a4;\">㊁</span> 1<br /><span style=\"color:#a4a4a4;\">㊂</span> single<br /><span style=\"color:#a4a4a4;\">㊃</span> a (article)<br /><span style=\"color:#a4a4a4;\">㊄</span> as soon as<br /><span style=\"color:#a4a4a4;\">㊅</span> entire<br /><span style=\"color:#a4a4a4;\">㊆</span> whole<br /><span style=\"color:#a4a4a4;\">㊇</span> all<br /><span style=\"color:#a4a4a4;\">㊈</span> throughout</span>", "一", "y"]
+irb(main):038:0> parse $file.readline
+=> ["二", "èr", "two"]
+irb(main):039:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ two<br /><span style=\"color:#a4a4a4;\">㊁</span> 2</span>", "二", "r"]
+irb(main):040:0> parse $file.readline
+=> ["三", "sān", "three"]
+irb(main):041:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ three<br /><span style=\"color:#a4a4a4;\">㊁</span> 3</span>", "三", "s;n"]
+irb(main):042:0> parse $file.readline
+=> ["十", "shí", "ten"]
+irb(main):043:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ ten<br /><span style=\"color:#a4a4a4;\">㊁</span> 10</span>", "十", "sh"]
+irb(main):044:0> parse $file.readline
+=> ["王", "wáng", "king; surname Wang"]
+irb(main):045:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ king<br /><span style=\"color:#a4a4a4;\">㊁</span> surname Wang</span>", "王", "w;ng"]
+irb(main):046:0> parse $file.readline
+=> ["土", "tǔ", "earth; dust; clay; local; indigenous; crude opium; unsophisticated; Tuzu ethnic group; surname Tu"]
+irb(main):047:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ earth<br /><span style=\"color:#a4a4a4;\">㊁</span> dust<br /><span style=\"color:#a4a4a4;\">㊂</span> clay<br /><span style=\"color:#a4a4a4;\">㊃</span> local<br /><span style=\"color:#a4a4a4;\">㊄</span> indigenous<br /><span style=\"color:#a4a4a4;\">㊅</span> crude opium<br /><span style=\"color:#a4a4a4;\">㊆</span> unsophisticated<br /><span style=\"color:#a4a4a4;\">㊇</span> Tuzu ethnic group<br /><span style=\"color:#a4a4a4;\">㊈</span> surname Tu</span>", "土", "t"]
+irb(main):048:0> parse $file.readline
+=> ["不", "bù", "(negative prefix); not; no"]
+irb(main):049:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ (negative prefix)<br /><span style=\"color:#a4a4a4;\">㊁</span> not<br /><span style=\"color:#a4a4a4;\">㊂</span> no</span>", "不", "b"]
+irb(main):050:0> parse $file.readline
+=> ["人", "rén", "man; person; people; MW; ; ; g; ; ; w;i"]
+irb(main):051:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ man<br /><span style=\"color:#a4a4a4;\">㊁</span> person<br /><span style=\"color:#a4a4a4;\">㊂</span> people<br /><span style=\"color:#a4a4a4;\">㊃</span> MW: <span style=\"color:#0000ff;\">个</span> - <span style=\"color:#0000ff;\">gè</span>, <span style=\"color:#0000ff;\">位</span> - <span style=\"color:#0000ff;\">wèi</span></span>", "人", "r;n"]
+irb(main):052:0> parse $file.readline
+=> ["大", "dà", "big; huge; large; major; great; wide; deep; oldest; eldest"]
+irb(main):053:0> 100.times {parse $file.readline}
+=> 100
+irb(main):054:0> 100.times {parse $file.readline}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pparse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ that<br /><span style=\"color:#a4a4a4;\">㊁</span> those<br /><span style=\"color:#a4a4a4;\">㊂</span> commonly pr. nei4 before a classifier, esp. in Beijing</span>", "那", "n"]
+irb(main):055:0> parse $file.readline
+=> ["娜", "nà", "elegant; graceful"]
+irb(main):056:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ elegant<br /><span style=\"color:#a4a4a4;\">㊁</span> graceful<br>(part of a name)</span>", "娜", "n"]
+irb(main):057:0> parse $file.readline
+=> ["哪", "nǎ", "which; (interrogative; followed by classifier or numeral;classifier)"]
+irb(main):058:0> parse $file.readline[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C100.times {parse $file.readline}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pparse $file.readlineline[Kload 'cards.rb'
+=> true
+irb(main):059:0> load 'cards.rb'parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ one<br /><span style=\"color:#a4a4a4;\">㊁</span> 1<br /><span style=\"color:#a4a4a4;\">㊂</span> single<br /><span style=\"color:#a4a4a4;\">㊃</span> a (article)<br /><span style=\"color:#a4a4a4;\">㊄</span> as soon as<br /><span style=\"color:#a4a4a4;\">㊅</span> entire<br /><span style=\"color:#a4a4a4;\">㊆</span> whole<br /><span style=\"color:#a4a4a4;\">㊇</span> all<br /><span style=\"color:#a4a4a4;\">㊈</span> throughout</span>", "一", "yī"]
+irb(main):060:0> parse $file.readline
+=> ["二", "èr", "㊀ two㊁ 2"]
+irb(main):061:0> [1,2,3][0..5[[K]
+=> [1, 2, 3]
+irb(main):062:0> load ;c[K[K'cards.rb'
+=> true
+irb(main):063:0> load 'cards.rb'[2P[1,2,3][0..5]parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ one<br /><span style=\"color:#a4a4a4;\">㊁</span> 1<br /><span style=\"color:#a4a4a4;\">㊂</span> single<br /><span style=\"color:#a4a4a4;\">㊃</span> a (article)<br /><span style=\"color:#a4a4a4;\">㊄</span> as soon as<br /><span style=\"color:#a4a4a4;\">㊅</span> entire<br /><span style=\"color:#a4a4a4;\">㊆</span> whole<br /><span style=\"color:#a4a4a4;\">㊇</span> all<br /><span style=\"color:#a4a4a4;\">㊈</span> throughout</span>", "一", "<span style=\"color:#ff0000;\">yī</span>"]
+irb(main):064:0> parse $file.readline
+=> ["二", "èr", "<span style=\"color:#a4a4a4;\">; two<br /><span style=\"color:#a4a4a4;\">;</span> 2</span>"]
+irb(main):065:0> parse $file.readline[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pload 'cards.rb'
+=> true
+irb(main):066:0> load 'cards.rb'parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ one<br /><span style=\"color:#a4a4a4;\">㊁</span> 1<br /><span style=\"color:#a4a4a4;\">㊂</span> single<br /><span style=\"color:#a4a4a4;\">㊃</span> a (article)<br /><span style=\"color:#a4a4a4;\">㊄</span> as soon as<br /><span style=\"color:#a4a4a4;\">㊅</span> entire<br /><span style=\"color:#a4a4a4;\">㊆</span> whole<br /><span style=\"color:#a4a4a4;\">㊇</span> all<br /><span style=\"color:#a4a4a4;\">㊈</span> throughout</span>", "一", "yī"]
+irb(main):067:0> parse $file.readline
+=> ["二", "èr", "; two; 2"]
+irb(main):068:0> parse $file.readline[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pload 'cards.rb'
+=> true
+irb(main):069:0> load 'cards.rb'parse $file.readline
+NoMethodError: undefined method `gsub1' for "yī":String
+	from ./cards.rb:14:in `parse'
+	from (irb):69
+	from :0
+irb(main):070:0> parse $file.readline
+NoMethodError: undefined method `gsub1' for "㊀ two㊁ 2":String
+	from ./cards.rb:14:in `parse'
+	from (irb):70
+	from :0
+irb(main):071:0> parse $file.readline[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pload 'cards.rb'
+=> true
+irb(main):072:0> load 'cards.rb'parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ one<br /><span style=\"color:#a4a4a4;\">㊁</span> 1<br /><span style=\"color:#a4a4a4;\">㊂</span> single<br /><span style=\"color:#a4a4a4;\">㊃</span> a (article)<br /><span style=\"color:#a4a4a4;\">㊄</span> as soon as<br /><span style=\"color:#a4a4a4;\">㊅</span> entire<br /><span style=\"color:#a4a4a4;\">㊆</span> whole<br /><span style=\"color:#a4a4a4;\">㊇</span> all<br /><span style=\"color:#a4a4a4;\">㊈</span> throughout</span>", "一", "yī"]
+irb(main):073:0> parse $file.readline
+=> ["二", "èr", "two; 2"]
+irb(main):074:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ two<br /><span style=\"color:#a4a4a4;\">㊁</span> 2</span>", "二", "èr"]
+irb(main):075:0> parse $file.readline
+=> ["三", "sān", "three; 3"]
+irb(main):076:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ three<br /><span style=\"color:#a4a4a4;\">㊁</span> 3</span>", "三", "sān"]
+irb(main):077:0> parse $file.readline
+=> ["十", "shí", "ten; 10"]
+irb(main):078:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ ten<br /><span style=\"color:#a4a4a4;\">㊁</span> 10</span>", "十", "shí"]
+irb(main):079:0> parse $file.readline
+=> ["王", "wáng", "king; surname Wang"]
+irb(main):080:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ king<br /><span style=\"color:#a4a4a4;\">㊁</span> surname Wang</span>", "王", "wáng"]
+irb(main):081:0> parse $file.readline
+=> ["土", "tǔ", "earth; dust; clay㊃ local㊄ indigenous㊅ crude opium㊆ unsophisticated㊇ Tuzu ethnic group㊈ surname Tu"]
+irb(main):082:0> str = "span style="color:#00aa00;">tǔ</span><br><span style="color:#a4a4a4;">㊀  earth<br /><span style="color:#a4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂</sp an> clay<br /><span style="color:#a4a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄< /span> indigenous<br /><span style="color:#a4a4a4;">㊅</span> crude opium<br /><span style="colo r:#a4a4a4;">㊆</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇</span> Tuzu ethnic gr oup<br /><span style="color:#a4a4a4;">㊈</span> surname Tu</span>
+irb(main):083:0* "
+irb(main):084:0" "
+SyntaxError: compile error
+(irb):82: syntax error, unexpected tIDENTIFIER, expecting $end
+str = "span style="color:#00aa00;">tǔ</span><br><span...
+                        ^
+	from (irb):82
+	from :0
+irb(main):085:0> str = 'span style="color:#00aa00;">tǔ</span><br><span style="color:#a4a4a4;">㊀  earth<br /><span style="color:#a4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂</sp an> clay<br /><span style="color:#a4a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄< /span> indigenous<br /><span style="color:#a4a4a4;">㊅</span> crude opium<br /><span style="colo r:#a4a4a4;">㊆</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇</span> Tuzu ethnic gr oup<br /><span style="color:#a4a4a4;">㊈</span> surname Tu</span>
+irb(main):086:0' '
+=> "span style=\"color:#00aa00;\">tǔ</span><br><span style=\"color:#a4a4a4;\">㊀ earth<br /><span style=\"color:#a4a4a4;\">㊁</span> dust<br /><span style=\"color:#a4a4a4;\">㊂</span> clay<br /><span style=\"color:#a4a4a4;\">㊃</span> local<br /><span style=\"color:#a4a4a4;\">㊄</span> indigenous<br /><span style=\"color:#a4a4a4;\">㊅</span> crude opium<br /><span style=\"color:#a4a4a4;\">㊆</span> unsophisticated<br /><span style=\"color:#a4a4a4;\">㊇</span> Tuzu ethnic group<br /><span style=\"color:#a4a4a4;\">㊈</span> surname Tu</span>\n"
+irb(main):087:0> str.span style="color:#00aa00;">tǔ</span><br><span style="color:#a4a4a4;">㊀ ea rth<br /><span style="color:#a4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂</span>  clay<br /><span style="color:#a4a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄</sp an> indigenous<br /><span style="color:#a4a4a4;">㊅</span> crude opium<br /><span style="color:# a4a4a4;">㊆</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇</span> Tuzu ethnic group <br /><span style="color:#a4a4a4;">㊈</span> surname Tu</span>
+irb(main):088:0* s[Kend
+SyntaxError: compile error
+(irb):87: syntax error, unexpected '<'
+...lor:#a4a4a4;">㊀ earth<br /><span style="color:#a4a4a4;">㊁...
+                              ^
+(irb):87: syntax error, unexpected '<'
+...4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂...
+                              ^
+(irb):87: syntax error, unexpected '<'
+...4a4a4;">㊂</span> clay<br /><span style="color:#a4a4a4;">㊃...
+                              ^
+(irb):87: syntax error, unexpected '<'
+...a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄...
+                              ^
+(irb):87: syntax error, unexpected '<'
+...">㊄</span> indigenous<br /><span style="color:#a4a4a4;">㊅...
+                              ^
+(irb):87: syntax error, unexpected '<'
+...>㊅</span> crude opium<br /><span style="color:#a4a4a4;">㊆...
+                              ^
+(irb):87: syntax error, unexpected '<'
+...</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇...
+                              ^
+(irb):87: syntax error, unexpected '<'
+...span> Tuzu ethnic group<br /><span style="color:#a4a4a4;">㊈...
+                              ^
+(irb):87: unknown regexp options - pa
+(irb):88: syntax error, unexpected kEND
+	from (irb):88
+	from :0
+irb(main):089:0> endstr.span style="color:#00aa00;">tǔ</span><br><span style="color:#a4a4a4;">㊀ earrth<br /><span style="color:#a4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂</span>  clay<br /><span style="color:#a4a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄</spaan> indigenous<br /><span style="color:#a4a4a4;">㊅</span> crude opium<br /><span style="color:#aa4a4a4;">㊆</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇</span> Tuzu ethnic group<<br /><span style="color:#a4a4a4;">㊈</span> surname Tu</span>[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kstr..split('<br>')[0..2].join.strip_tags[C[1Psplit('<br>')[0..2].join.strip_tags[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+=> "span style=\"color:#00aa00;\">tǔ㊀ earth㊁ dust㊂ clay㊃ local㊄ indigenous㊅ crude opium㊆ unsophisticated㊇ Tuzu ethnic group㊈ surname Tu\n"
+irb(main):090:0> str.split('<br>')[0..2].join.strip_tags[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+=> ["span style=\"color:#00aa00;\">tǔ</span>", "<span style=\"color:#a4a4a4;\">㊀ earth<br /><span style=\"color:#a4a4a4;\">㊁</span> dust<br /><span style=\"color:#a4a4a4;\">㊂</span> clay<br /><span style=\"color:#a4a4a4;\">㊃</span> local<br /><span style=\"color:#a4a4a4;\">㊄</span> indigenous<br /><span style=\"color:#a4a4a4;\">㊅</span> crude opium<br /><span style=\"color:#a4a4a4;\">㊆</span> unsophisticated<br /><span style=\"color:#a4a4a4;\">㊇</span> Tuzu ethnic group<br /><span style=\"color:#a4a4a4;\">㊈</span> surname Tu</span>\n"]
+irb(main):091:0> str.split('<br>')[0..2][K[K[K[K[K[K
+=> ["span style=\"color:#00aa00;\">tǔ</span>", "<span style=\"color:#a4a4a4;\">㊀ earth<br /><span style=\"color:#a4a4a4;\">㊁</span> dust<br /><span style=\"color:#a4a4a4;\">㊂</span> clay<br /><span style=\"color:#a4a4a4;\">㊃</span> local<br /><span style=\"color:#a4a4a4;\">㊄</span> indigenous<br /><span style=\"color:#a4a4a4;\">㊅</span> crude opium<br /><span style=\"color:#a4a4a4;\">㊆</span> unsophisticated<br /><span style=\"color:#a4a4a4;\">㊇</span> Tuzu ethnic group<br /><span style=\"color:#a4a4a4;\">㊈</span> surname Tu</span>\n"]
+irb(main):092:0> str.split('<br>').count
+=> 2
+irb(main):093:0> str.split('<br>').count[K[0..2].join.strip_tags[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[Kstr.span style="color:#00aa00;">tǔ</span><br><span style="color:#a4a4a4;">㊀ earrth<br /><span style="color:#a4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂</span>  clay<br /><span style="color:#a4a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄</spaan> indigenous<br /><span style="color:#a4a4a4;">㊅</span> crude opium<br /><span style="color:#aa4a4a4;">㊆</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇</span> Tuzu ethnic group<<br /><span style="color:#a4a4a4;">㊈</span> surname Tu</span>[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstr = 'span style="color:#00aa00;">tǔ</span><br><span style="color:#a4a4a4;">㊀  earth<br /><span style="color:#a4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂</spaan> clay<br /><span style="color:#a4a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄<//span> indigenous<br /><span style="color:#a4a4a4;">㊅</span> crude opium<br /><span style="colorr:#a4a4a4;">㊆</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇</span> Tuzu ethnic grooup<br /><span style="color:#a4a4a4;">㊈</span> surname Tu</span>[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstr = "span style="color:#00aa00;">tǔ</span><br><span style="color:#a4a4a4;">㊀  earth<br /><span style="color:#a4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂</spaan> clay<br /><span style="color:#a4a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄<//span> indigenous<br /><span style="color:#a4a4a4;">㊅</span> crude opium<br /><span style="colorr:#a4a4a4;">㊆</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇</span> Tuzu ethnic grooup<br /><span style="color:#a4a4a4;">㊈</span> surname Tu</span>[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cparse $file.readline[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pload 'cards.rb'parse $file.readline[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pload 'cards.rb'
+=> true
+irb(main):094:0> load 'cards.rb'str.split('<br>').count[K[0..2].join.strip_tags[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cend[Kstr.span style="color:#00aa00;">tǔ</span><br><span style="color:#a4a4a4;">㊀ earrth<br /><span style="color:#a4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂</span>  clay<br /><span style="color:#a4a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄</spaan> indigenous<br /><span style="color:#a4a4a4;">㊅</span> crude opium<br /><span style="color:#aa4a4a4;">㊆</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇</span> Tuzu ethnic group<<br /><span style="color:#a4a4a4;">㊈</span> surname Tu</span>[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstr = 'span style="color:#00aa00;">tǔ</span><br><span style="color:#a4a4a4;">㊀  earth<br /><span style="color:#a4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂</spaan> clay<br /><span style="color:#a4a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄<//span> indigenous<br /><span style="color:#a4a4a4;">㊅</span> crude opium<br /><span style="colorr:#a4a4a4;">㊆</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇</span> Tuzu ethnic grooup<br /><span style="color:#a4a4a4;">㊈</span> surname Tu</span>[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstr = "span style="color:#00aa00;">tǔ</span><br><span style="color:#a4a4a4;">㊀  earth<br /><span style="color:#a4a4a4;">㊁</span> dust<br /><span style="color:#a4a4a4;">㊂</spaan> clay<br /><span style="color:#a4a4a4;">㊃</span> local<br /><span style="color:#a4a4a4;">㊄<//span> indigenous<br /><span style="color:#a4a4a4;">㊅</span> crude opium<br /><span style="colorr:#a4a4a4;">㊆</span> unsophisticated<br /><span style="color:#a4a4a4;">㊇</span> Tuzu ethnic grooup<br /><span style="color:#a4a4a4;">㊈</span> surname Tu</span>[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cparse $file.readline[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+=> ["<span style=\"color:#a4a4a4;\">㊀ one<br /><span style=\"color:#a4a4a4;\">㊁</span> 1<br /><span style=\"color:#a4a4a4;\">㊂</span> single<br /><span style=\"color:#a4a4a4;\">㊃</span> a (article)<br /><span style=\"color:#a4a4a4;\">㊄</span> as soon as<br /><span style=\"color:#a4a4a4;\">㊅</span> entire<br /><span style=\"color:#a4a4a4;\">㊆</span> whole<br /><span style=\"color:#a4a4a4;\">㊇</span> all<br /><span style=\"color:#a4a4a4;\">㊈</span> throughout</span>", "一", "yī"]
+irb(main):095:0> parse $file.readline
+=> ["二", "èr", "two; 2"]
+irb(main):096:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ two<br /><span style=\"color:#a4a4a4;\">㊁</span> 2</span>", "二", "èr"]
+irb(main):097:0> parse $file.readline
+=> ["三", "sān", "three; 3"]
+irb(main):098:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ three<br /><span style=\"color:#a4a4a4;\">㊁</span> 3</span>", "三", "sān"]
+irb(main):099:0> parse $file.readline
+=> ["十", "shí", "ten; 10"]
+irb(main):100:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ ten<br /><span style=\"color:#a4a4a4;\">㊁</span> 10</span>", "十", "shí"]
+irb(main):101:0> parse $file.readline
+=> ["王", "wáng", "king; surname Wang"]
+irb(main):102:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ king<br /><span style=\"color:#a4a4a4;\">㊁</span> surname Wang</span>", "王", "wáng"]
+irb(main):103:0> parse $file.readline
+=> ["土", "tǔ", "earth; dust; clay"]
+irb(main):104:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ earth<br /><span style=\"color:#a4a4a4;\">㊁</span> dust<br /><span style=\"color:#a4a4a4;\">㊂</span> clay<br /><span style=\"color:#a4a4a4;\">㊃</span> local<br /><span style=\"color:#a4a4a4;\">㊄</span> indigenous<br /><span style=\"color:#a4a4a4;\">㊅</span> crude opium<br /><span style=\"color:#a4a4a4;\">㊆</span> unsophisticated<br /><span style=\"color:#a4a4a4;\">㊇</span> Tuzu ethnic group<br /><span style=\"color:#a4a4a4;\">㊈</span> surname Tu</span>", "土", "tǔ"]
+irb(main):105:0> parse $file.readline
+=> ["不", "bù", "(negative prefix); not; no"]
+irb(main):106:0> parse $file.readline[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kload ';c[K[Kcq[Kards.rb'
+=> true
+irb(main):107:0> load 'cards.rb'parse $file.readline
+=> ["一", "yī", "one; 1; single"]
+irb(main):108:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ one<br /><span style=\"color:#a4a4a4;\">㊁</span> 1<br /><span style=\"color:#a4a4a4;\">㊂</span> single<br /><span style=\"color:#a4a4a4;\">㊃</span> a (article)<br /><span style=\"color:#a4a4a4;\">㊄</span> as soon as<br /><span style=\"color:#a4a4a4;\">㊅</span> entire<br /><span style=\"color:#a4a4a4;\">㊆</span> whole<br /><span style=\"color:#a4a4a4;\">㊇</span> all<br /><span style=\"color:#a4a4a4;\">㊈</span> throughout</span>", "一", "yī"]
+irb(main):109:0> parse $file.readline
+=> ["二", "èr", "two; 2"]
+irb(main):110:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ two<br /><span style=\"color:#a4a4a4;\">㊁</span> 2</span>", "二", "èr"]
+irb(main):111:0> parse $file.readline
+=> ["三", "sān", "three; 3"]
+irb(main):112:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ three<br /><span style=\"color:#a4a4a4;\">㊁</span> 3</span>", "三", "sān"]
+irb(main):113:0> parse $file.readline
+=> ["十", "shí", "ten; 10"]
+irb(main):114:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ ten<br /><span style=\"color:#a4a4a4;\">㊁</span> 10</span>", "十", "shí"]
+irb(main):115:0> parse $file.readline
+=> ["王", "wáng", "king; surname Wang"]
+irb(main):116:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ king<br /><span style=\"color:#a4a4a4;\">㊁</span> surname Wang</span>", "王", "wáng"]
+irb(main):117:0> parse $file.readline
+=> ["土", "tǔ", "earth; dust; clay"]
+irb(main):118:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ earth<br /><span style=\"color:#a4a4a4;\">㊁</span> dust<br /><span style=\"color:#a4a4a4;\">㊂</span> clay<br /><span style=\"color:#a4a4a4;\">㊃</span> local<br /><span style=\"color:#a4a4a4;\">㊄</span> indigenous<br /><span style=\"color:#a4a4a4;\">㊅</span> crude opium<br /><span style=\"color:#a4a4a4;\">㊆</span> unsophisticated<br /><span style=\"color:#a4a4a4;\">㊇</span> Tuzu ethnic group<br /><span style=\"color:#a4a4a4;\">㊈</span> surname Tu</span>", "土", "tǔ"]
+irb(main):119:0> parse $file.readline
+=> ["不", "bù", "(negative prefix); not; no"]
+irb(main):120:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ (negative prefix)<br /><span style=\"color:#a4a4a4;\">㊁</span> not<br /><span style=\"color:#a4a4a4;\">㊂</span> no</span>", "不", "bù"]
+irb(main):121:0> parse $file.readline
+=> ["人", "rén", "man; person; people"]
+irb(main):122:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ man<br /><span style=\"color:#a4a4a4;\">㊁</span> person<br /><span style=\"color:#a4a4a4;\">㊂</span> people<br /><span style=\"color:#a4a4a4;\">㊃</span> MW: <span style=\"color:#0000ff;\">个</span> - <span style=\"color:#0000ff;\">gè</span>, <span style=\"color:#0000ff;\">位</span> - <span style=\"color:#0000ff;\">wèi</span></span>", "人", "rén"]
+irb(main):123:0> parse $file.readline
+=> ["大", "dà", "big; huge; large"]
+irb(main):124:0> parse $file.readline
+=> ["<span style=\"color:#a4a4a4;\">㊀ big<br /><span style=\"color:#a4a4a4;\">㊁</span> huge<br /><span style=\"color:#a4a4a4;\">㊂</span> large<br /><span style=\"color:#a4a4a4;\">㊃</span> major<br /><span style=\"color:#a4a4a4;\">㊄</span> great<br /><span style=\"color:#a4a4a4;

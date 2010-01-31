@@ -30,12 +30,7 @@ class User < ActiveRecord::Base
   end
 
   def can_build?(building_type)
-    building_type.word_ids_required.each do |word_id|
-      flashcard = Flashcard.first :conditions => 
-        {:word_id => word_id, :user_id => self.id}
-      return false if flashcard.nil? or !flashcard.learned?
-    end
-    return true
+    learned_words >= building_type.words_required
   end
 
   def village_unlocked?
@@ -48,16 +43,12 @@ class User < ActiveRecord::Base
 
   def make_more_flashcards
     while needs_more_flashcards?
-      max_word_id = flashcards.map {|f| f.word_id}.max
-      begin
-        new_word = Word.find((max_word_id || 0) + 1)
-      rescue ActiveRecord::RecordNotFound
-        raise
-      end
-      flashcards.create :word_id => new_word.id, 
-        :correct_tests => 0, 
-        :incorrect_tests => 0, 
-        :knowledge_chance => 0
+      position_in_list = flashcards.map {|f| f.position}.max
+      position_in_list = 0 if position_in_list.nil?
+      new_word = Word.first_where :position => position_in_list + 1,
+      :word_list_id => current_list_id
+      return if new_word.nil?
+      flashcards.create :word_id => new_word.id
     end
   end
 
@@ -74,7 +65,8 @@ class User < ActiveRecord::Base
           return unlearned_flashcards.rand
         end
       end
-    elsif has_due_flashcards?
+    end
+    if has_due_flashcards?
       return due_flashcards.first
     else
       unlearned_flashcards.remove(options[:exclude]).rand
@@ -117,5 +109,6 @@ class User < ActiveRecord::Base
 
   def set_list(list_id)
     update_attribute :current_list_id, list_id
+    make_more_flashcards
   end
 end

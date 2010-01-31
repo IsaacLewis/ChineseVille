@@ -55,10 +55,10 @@ class Flashcard < ActiveRecord::Base
     # if the character hasn't been learned, or doesn't have a 
     # next due date, we won't start scheduling it for SRS yet
     return unless learned? or !next_due.nil?
-    if last_interval.nil?
-      new_interval = 1
+    if last_interval.nil? or q < 3
+      new_interval = 0.5 * q
     else
-      new_interval = last_interval * efactor
+      new_interval = [last_interval * efactor, 1].max
     end
     new_efactor = efactor + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02))
     update_attribute :next_due, Time.now + new_interval.days
@@ -78,14 +78,41 @@ class Flashcard < ActiveRecord::Base
   end
 
   def correct_answer_update
+    user.unbounded_update :food, +3 unless learned? or recently_answered_correctly?
+    unbounded_update :correct_tests, +1
+    'Correct!'
+  end
+
+  def wrong_answer_update
+    msg = wrong_answer_message # needs to be up here as it may change later
+    bounded_update :knowledge_chance, -23, 0
+    unbounded_update :incorrect_tests, +1
+    user.bounded_update :energy, -1, 0
+    update_due_date 0
+    msg
+  end
+
+  def wrong_answer_message
+    "Incorrect: the #{answer_type} for " +
+      "<b>#{hint1}</b>/<b>#{hint2}</b> is <b>#{answer}</b>."
+  end
+
+  def rate_difficulty(rating)
     previously_learned = learned?
     previously_buildable = user.buildables
-    user.unbounded_update :food, +3 unless learned? or recently_answered_correctly?
-    bounded_update :knowledge_chance, +17, 100
-    unbounded_update :correct_tests, +1
-    update_due_date 5
-
-    message = 'Correct!'
+    case rating
+      when "easy"
+        bounded_update :knowledge_chance, +43, 100
+        update_due_date 5
+      when "medium"
+        bounded_update :knowledge_chance, +23, 100
+        update_due_date 4
+      when "hard"
+        bounded_update :knowledge_chance, +8, 100
+        update_due_date 3
+    end
+    
+    message = ''
     if not previously_learned and learned?
         message += " You have mastered the word #{self.character}!"
     end
@@ -95,19 +122,6 @@ class Flashcard < ActiveRecord::Base
       message += " You have unlocked #{building.name.downcase.pluralize}!"
     end
     message
-  end
-
-  def wrong_answer_update
-    bounded_update :knowledge_chance, -17, 0
-    unbounded_update :incorrect_tests, +1
-    user.bounded_update :energy, -1, 0
-    update_due_date 0
-    wrong_answer_message
-  end
-
-  def wrong_answer_message
-    "Incorrect: the #{answer_type} for " +
-      "<b>#{hint1}</b>/<b>#{hint2}</b> is <b>#{answer}</b>."
   end
 
   def learned?
