@@ -130,6 +130,13 @@ a:hover { color: #eee; background-color:#7f93bc; }
   left: 285px;
 }
 
+#rating_box {
+  float: right;
+  position: absolute;
+  left: 285px;
+  width: 240px;
+}
+
 .skinny_table {
   border: 0px;
 }

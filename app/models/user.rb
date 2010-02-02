@@ -5,8 +5,6 @@ class User < ActiveRecord::Base
   has_many :words, :through => :flashcards
   has_many :tests, :through => :flashcards
 
-  validates_uniqueness_of :name
-
   MaxFlashcards = 12
   MinFlashcards = 10
   MaxEnergy = 30
@@ -16,7 +14,7 @@ class User < ActiveRecord::Base
     new = create :name => fb_user.name, 
     :facebook_id => fb_user.facebook_id,
     :authentication => 'facebook',
-    :energy => MaxEnergy
+    :energy => MaxEnergy * 2
     new.save
     new
   end

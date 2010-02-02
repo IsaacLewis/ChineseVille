@@ -3,8 +3,10 @@ require 'jcode'
 require 'rubygems'
 require 'hpricot'
 
-$file = File.new "/home/isaac/npcr.txt"
+$file = File.new "/home/isaac/cv/doc/mccf.txt"
 # $line = $file.readline
+
+# New practical chinese reader
 
 def parse(line)
   character, line = line.chomp.split "\t"
@@ -17,10 +19,18 @@ def parse(line)
   return character, pinyin, english
 end
 
+# Modern chinese Character frequency list
+def parse2(line)
+  character, english, pinyin = line.chomp.split "\t"
+  english = english.split('/')[0..2].join('; ')
+  pinyin = pinyin.split('/')[0..2].join('; ')
+  return character, pinyin, english
+end
+
 def parse_file(file)
   position = 0
   file.each_line do |line|
-    character, pinyin, english = parse(line)
+    character, pinyin, english = parse2(line)
     unless character =~ /[A-z]/
       puts "Char: #{character} Pinyin: #{pinyin} English: #{english}"
       position += 1
@@ -28,7 +38,7 @@ def parse_file(file)
       :pinyin => pinyin,
       :character => character,
       :position => position,
-      :word_list_id => 1
+      :word_list_id => 3
     end
   end
 end

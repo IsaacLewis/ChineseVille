@@ -79,9 +79,9 @@ class Flashcard < ActiveRecord::Base
 
   def correct_answer_update
     user.unbounded_update :food, +3 unless learned? or recently_answered_correctly?
-    user.bounded_update :energy, -1, 0 unless user.young?
+    user.bounded_update :energy, -1, 0
     unbounded_update :correct_tests, +1
-    'Correct!'
+    'Correct!' + user.energy.to_s + ' ' + user.food.to_s
   end
 
   def wrong_answer_update

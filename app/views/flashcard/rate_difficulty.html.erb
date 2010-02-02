@@ -6,7 +6,7 @@
 <div id="hint2"><%= @last_flashcard.hint2.add_breaks '; ' %></div>
 </div>
 
-<div id="answer_box">
+<div id="rating_box">
 Rate this card:
 <% for rating in ['easy','medium','hard'] %>
   <% form_tag ({:controller => "flashcard", :action => "rate_difficulty"}, :method => :post) do %>
@@ -15,6 +15,8 @@ Rate this card:
     <%= submit_tag rating, :class => "game_button rating" %> 
   <% end %>
 <% end %>
+<br />
+<b>Easy</b> flashcards will be revised less frequently than <b>hard</b> ones.
 </div>
 <div id="footer">
 <hr />

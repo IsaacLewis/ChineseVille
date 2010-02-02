@@ -19,8 +19,9 @@ class ApplicationController < ActionController::Base
     @user = User.first_where :facebook_id => @fbuser.facebook_id
     if @user.nil?
       @user = User.create_from @fbuser 
+    else
+      @user.reload
     end
-    @user.reload
   end
 
   def require_admin

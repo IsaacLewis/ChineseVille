@@ -28,8 +28,6 @@ PRODUCT
 
 - fix getting right answer on refresh
 
-- ads mixed in with flashcards
-
 - better pinyin representation
 -- add methods to Word model for pinyin display
 --- .with_tones
@@ -76,6 +74,9 @@ PRODUCT
 
 - version control
 -- c/o SVN vs GIT
+
+- ads mixed in with flashcards
+
 
 MARKETING
 
