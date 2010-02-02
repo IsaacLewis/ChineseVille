@@ -9,13 +9,14 @@ class User < ActiveRecord::Base
 
   MaxFlashcards = 12
   MinFlashcards = 10
-  MaxEnergy = 20
-  EnergyTick = 600
+  MaxEnergy = 30
+  EnergyTick = 360
 
   def self.create_from(fb_user)
     new = create :name => fb_user.name, 
     :facebook_id => fb_user.facebook_id,
-    :authentication => 'facebook'
+    :authentication => 'facebook',
+    :energy => MaxEnergy
     new.save
     new
   end
@@ -118,5 +119,9 @@ class User < ActiveRecord::Base
   def set_list(list_id)
     update_attribute :current_list_id, list_id
     make_more_flashcards
+  end
+
+  def young?
+    created_at > Time.now - 1.day
   end
 end

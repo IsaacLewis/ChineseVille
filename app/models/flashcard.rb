@@ -79,6 +79,7 @@ class Flashcard < ActiveRecord::Base
 
   def correct_answer_update
     user.unbounded_update :food, +3 unless learned? or recently_answered_correctly?
+    user.bounded_update :energy, -1, 0 unless user.young?
     unbounded_update :correct_tests, +1
     'Correct!'
   end
@@ -147,6 +148,10 @@ class Flashcard < ActiveRecord::Base
     else
       'in ' + (next_due - Time.now).to_approximate_duration
     end
+  end
+
+  def young?
+    created_at < Time.now - 1.day
   end
 
   # ranges from 220 to 120

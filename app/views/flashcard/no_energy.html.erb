@@ -1,9 +1,9 @@
 <h1>You are out of energy!</h1>
-<p>ChineseVille encourages short and frequent study sessions as an effective way to learn.</p>
+<p>ChineseVille encourages <b>short</b> and <b>frequent</b> study sessions as an effective way to learn.</p>
 
 <ul>
-<li>You <b>lose</b> energy whenever you answer a question incorrectly</li>
-<li>You <b>gain</b> energy once every 10 minutes</li>
+<li>You <b>lose</b> energy whenever you answer a question</li>
+<li>You <b>gain</b> energy once every <%= User::EnergyTick / 60 %> minutes</li>
 </ul>
 
 <p><%= link_to "Play again", :controller => :flashcard, :action => :test %> when your energy rises above 0.</p>

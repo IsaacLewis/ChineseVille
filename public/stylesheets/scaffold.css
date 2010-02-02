@@ -1,8 +1,7 @@
-body { background-color: #fff; color: #333; }
-
 body {
-  font-family: verdana, arial, helvetica, sans-serif;
-  background-color: #899;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
   line-height: 140%;
   font-size: 14px;
   margin:0;
@@ -20,8 +19,7 @@ pre {
 }
 
 a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#464; }
+a:hover { color: #eee; background-color:#7f93bc; }
 
 .last_answer {
   font-size: 120%;
@@ -31,13 +29,13 @@ a:hover { color: #fff; background-color:#464; }
 }
 
 .correct_answer {
-  background-color: #8a8;
-  border: 2px solid green;
+  background-color: #eceff6;
+  border: 2px solid #d4dae8 ;
 }
 
 .incorrect_answer {
-  background-color: #a88;
-  border: 2px solid #833;
+  background-color: #ffebe8;
+  border: 2px solid #dd3c10;
 }
 
 #stats-box {
@@ -97,40 +95,29 @@ a:hover { color: #fff; background-color:#464; }
   min-height: 80px;
 }
 
-.answer {
-  background: #686;
-  color: #222;
-  border: 2px outset #353;
+.game_button {
+  background: #5b74a8;
+  color: #eee;
+  border: 2px outset #29447e;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
-  margin: 0px;
-  width: 230px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: inline;
+  margin: 2px;
+  padding: 5px;
 }
 
-.rating {
-  font-weight: bold;
-  background: #686;
-  color: #222;
-  border: 2px outset #353;
-  text-align: center;
-  font-size: 16px;
-  margin: 2px;
+.answer {
+  margin: 0px;
   width: 230px;
   height: 50px;
   display: inline;
 }
 
-.game_button {
-  background: #686;
-  color: #222;
-  border: 2px outset #353;
-  text-align: center;
-  margin: 2px;
-  padding: 5px;
+.rating {
+  width: 230px;
+  height: 50px;
+  font-size:20px;
+  display: inline;
 }
 
 #footer {
@@ -157,21 +144,20 @@ a:hover { color: #fff; background-color:#464; }
 
 #navigation {
 	display:block;
-	background: #8a8;
+	background: #3b5998;
 	padding:3px 0;margin:0;
 	overflow:auto;
-}
+} 
 #navigation li {
 	display:inline;
 	list-style-type:none;
-	margin-top:5 A2FF00;
 	padding:0;margin:0;
 }
 #navigation li a {
 	display:block;
 	float:left;
 	padding:1ex 1em;
-	color:#333;
+	color:#eee;
 	text-decoration:none;
 }
 

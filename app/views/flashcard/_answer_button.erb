@@ -2,5 +2,6 @@
     <%= hidden_field_tag :question_id, @flashcard.id %>
     <%= hidden_field_tag :answer_id, answer.word.id %>
     <%= hidden_field_tag :answer_type, @answer_type %>
-    <%= submit_tag answer.show(@answer_type), :class => "answer" %> 
+    <% answer_text = answer.show(@answer_type) %>
+    <%= submit_tag answer_text, :style => "font-size: #{answer_text.scaling}%", :class => "game_button answer" %> 
   <% end %>

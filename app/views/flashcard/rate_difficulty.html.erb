@@ -12,7 +12,7 @@ Rate this card:
   <% form_tag ({:controller => "flashcard", :action => "rate_difficulty"}, :method => :post) do %>
     <%= hidden_field_tag :flashcard_id, @last_flashcard.id %>
     <%= hidden_field_tag :rating, rating %>
-    <%= submit_tag rating, :class => "rating" %> 
+    <%= submit_tag rating, :class => "game_button rating" %> 
   <% end %>
 <% end %>
 </div>
