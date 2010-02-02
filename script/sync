@@ -1,0 +1,1 @@
+rsync --verbose  --progress --stats --compress --rsh=/usr/bin/ssh       --recursive --times --perms --links  --exclude "*log" --exclude "*~" --exclude '.git' --exclude 'db'      /home/isaac/prj/cv* www.chinese-ville.com:/home/isaac/
