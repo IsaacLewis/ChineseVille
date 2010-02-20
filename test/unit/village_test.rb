@@ -10,6 +10,8 @@ class VillageTest < ActiveSupport::TestCase
     assert_equal false, new.save
     new = Village.create :name => (rand(10000).to_s), :ration_level => 'normal'
     assert new.save
+    new = Village.create :name => 'Hong Kong', :ration_level => 'normal'
+    assert_equal false, new.save
   end
 
   def test_defaults

@@ -1,4 +1,6 @@
-<%= render :partial => "energy" %>
+<div id="status_info">
+Characters known: <b><%= @user.learned_words %></b>
+Due: <b><span id="due"><%= @user.due_flashcards_count %></span></b>
 <br />
-Rice: <%= @user.food %>
-Characters known: <%= @user.learned_words %>
+<%= render :partial => "energy" %>
+</div>

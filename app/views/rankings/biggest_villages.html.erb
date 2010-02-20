@@ -1,0 +1,6 @@
+<h1>Biggest Villages</h1>
+<ol>
+<% for village in @villages %>
+  <li><b><%= village.name %></b> population:<%= village.population %> (chief: <%= village.user.name %>)</li>
+<% end %>
+</ol>

@@ -1,0 +1,7 @@
+<%= update_page_js %>
+$('#answer_<%= @correct_answer_id %>').animate({backgroundColor: '#7a7', opacity: 1}, 2000);
+$('#answer_<%= @last_answer.id %>').animate({backgroundColor: '#a77'}, 2000, function() {
+  progress_bar = $('#progress_bar');
+  progress_bar.animate({width: 0}, 1000);
+  <%= show_new_card_js %>
+});

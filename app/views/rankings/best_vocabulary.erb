@@ -1,0 +1,6 @@
+<h1>Best Vocabulary</h1>
+<ol>
+<% for user in @users %>
+  <li><b><%= user.name %></b> knows <%= user.learned_words %> words</li>
+<% end %>
+</ol>

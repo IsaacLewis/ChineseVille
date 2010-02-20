@@ -1,0 +1,16 @@
+<% content_for :content do %>
+<div id="flashcard_buttons_container">
+  <div id='answer_container'><%= render :partial => "answer" %></div>
+  <div id="reward_slider"></div>
+  <div id='flashcard_container'><%= render :partial => "flashcard", :object => @flashcard %></div>
+  <div id="buttons"><%= yield(:buttons) %></div>
+  <hr />
+  <%= render :partial => "countdown" %>
+  <%= render :partial => "combo" %>
+</div>
+<div id="footer">
+  <%= render :partial => "status" %>
+</div>
+<% end %>
+
+<%= render :file => 'layouts/application' %>

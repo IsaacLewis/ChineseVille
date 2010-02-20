@@ -10,11 +10,10 @@ PRODUCT
 -- html parsers
 
 - new users
--- sign up thru FB
 -- sign up thru email
--- new users get flashcards and village
 
 - inviting friends
+-- jobs
 
 - friends page
 
@@ -43,8 +42,6 @@ PRODUCT
 -- record common confusions
 -- choose answers based on common confusions
 
-- combo bonus for multiple right answers
-
 - dont show multiple answers of the same value (eg pinyin)
 
 - flashcards have limited time to answer
@@ -60,11 +57,6 @@ PRODUCT
 
 - popups when each building unlocked
 -- javascript popup
-
-- tweak clocks
--- rate of increase
--- max/min values
--- update calling JS
 
 - rankings of friends
 

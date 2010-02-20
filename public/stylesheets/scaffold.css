@@ -38,6 +38,46 @@ a:hover { color: #eee; background-color:#7f93bc; }
   border: 2px solid #dd3c10;
 }
 
+#tooltip {
+    position: absolute;
+    z-index: 3000;
+    border: 1px solid #111;
+    background-color: #eee;
+    padding: 5px;
+    opacity: 0.92;
+}
+#tooltip h3, #tooltip div { margin: 0; }
+
+#progress_bar {
+    background-color: #ada;
+    height: 15px;
+}
+
+#progress_box {
+    clear: both;
+    height: 15px;
+    width: 280px;
+    border: 1px solid #252;
+    margin-bottom: 8px;
+}
+
+#countdown_bar {
+    background-color: #daa;
+    height: 15px;
+}
+
+#countdown_box {
+    clear: both;
+    height: 15px;
+    width: 280px;
+    border: 1px solid #522;
+    margin-bottom: 8px;
+}
+
+hr {
+    clear: both;
+}
+
 #stats-box {
   width: 700px;
 }
@@ -71,6 +111,10 @@ a:hover { color: #eee; background-color:#7f93bc; }
   background-color: #fff;
   padding: 5px;
   border: 1px solid #000;
+  width: 180px;
+  position: absolute;
+  font-size: 90%;
+  display: none;
 }
 
 #flashcard {
@@ -147,6 +191,23 @@ a:hover { color: #eee; background-color:#7f93bc; }
 
 .inline {
   display: inline;
+}
+
+#combo_image {
+  float: left;
+  position: relative;
+  left: 10px;
+}
+
+#status_info {
+  float: left;
+}
+
+#reward_slider {
+  font-size: 200%;
+  color: #f5b800;
+  position: absolute;
+  display: none;
 }
 
 #navigation {

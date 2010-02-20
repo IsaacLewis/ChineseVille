@@ -1,0 +1,29 @@
+<%= update_page_js %>
+$('#answer_<%= @last_answer.id %>').animate({backgroundColor: '#7a7'}, 2000, function() {
+  $('#buttons').html('<%= escape_javascript(render :partial => 'rate_difficulty') %>');
+  progress_bar = $('#progress_bar');
+  progress_bar.animate({width: <%= @user.combos %> * 28});
+
+  // rice_element = $('#rice_amount');
+  // rice = parseInt(rice_element.html());
+  // slider = $('#reward_slider');
+  // offset = $('#flashcard').offset();
+  // offset.left += 100;
+  // offset.top += 100
+  // slider.css(offset);
+  // slider.html('<%= @last_reward.add_plus %>');
+  // slider.show();
+  // slider.animate({fontSize: '500%'}, 400);
+  // slider.animate({fontSize: '120%'}, 400);
+  // slider.animate(rice_element.offset(), 300, function() {					   
+  //  $(this).hide();
+  //  colour = rice_element.css('color');
+  //  rice_element.animate({fontSize: '110%', color: '#888'}, 150);
+  //  rice_element.html(rice + <%= @last_reward %>);
+  //  rice_element.animate({fontSize: '100%', color: colour}, 150);});
+
+});
+
+
+
+

@@ -1,7 +1,10 @@
-  <% form_tag ({:controller => "flashcard", :action => "answer"}, :method => :post, :class => "inline") do %>
+  <% form_remote_tag (:url => {:controller => "flashcard", :action => "answer"}, 
+  :method => :post, :class => "inline") do %>
     <%= hidden_field_tag :question_id, @flashcard.id %>
     <%= hidden_field_tag :answer_id, answer.word.id %>
     <%= hidden_field_tag :answer_type, @answer_type %>
     <% answer_text = answer.show(@answer_type) %>
-    <%= submit_tag answer_text, :style => "font-size: #{answer_text.scaling}%", :class => "game_button answer" %> 
+    <%= submit_tag answer_text, :style => "font-size: #{answer_text.scaling}%", 
+    :class => "game_button answer", :id=>"answer_"+answer.word.id.to_s %> 
   <% end %>
+  <%= javascript_tag "$('#answer_#{answer.word.id}').click(function() {fadeButtons('answer_#{answer.word.id}')})" %>

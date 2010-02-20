@@ -11,8 +11,8 @@
 development:
   api_key: 7b40d8a0acb8ae641e6d03f65d94b3ad
   secret_key: d03e048f5f08eb23acd1021bbb749e15
-  canvas_page_name: chinesevilledev
-  callback_url: http://www.chinese-ville.com:3000
+  canvas_page_name: chinesevillebeta
+  callback_url: http://www.chinese-ville.com/
   pretty_errors: true
   set_asset_host_to_callback_url: true
   tunnel:
@@ -23,9 +23,9 @@ development:
     server_alive_interval: 0
 
 test:
-  api_key: 
-  secret_key: 
-  canvas_page_name: 
+  api_key: 7b40d8a0acb8ae641e6d03f65d94b3ad
+  secret_key: d03e048f5f08eb23acd1021bbb749e15
+  canvas_page_name: chinesevillebeta
   callback_url:
   set_asset_host_to_callback_url: true
   tunnel:
@@ -36,14 +36,14 @@ test:
     server_alive_interval: 0
 
 production:
-  api_key: 
-  secret_key: 
-  canvas_page_name: 
-  callback_url: 
+  api_key: 7b40d8a0acb8ae641e6d03f65d94b3ad
+  secret_key: d03e048f5f08eb23acd1021bbb749e15
+  canvas_page_name: chinesevillebeta
+  callback_url: http://www.chinese-ville.com/
   set_asset_host_to_callback_url: true   
   tunnel:
     public_host_username: 
     public_host: 
-    public_port: 4007
+    public_port: 80
     local_port: 3000
     server_alive_interval: 0

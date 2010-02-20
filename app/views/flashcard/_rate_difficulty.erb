@@ -1,0 +1,12 @@
+  <div id="rating_box">
+  Rate this card:
+  <% for rating in ['easy','medium','hard'] %>
+    <% form_remote_tag (:url => {:controller => "flashcard", :action => "submit_difficulty_rating"}, :method => :post) do %>
+      <%= hidden_field_tag :flashcard_id, @flashcard.id %>
+      <%= hidden_field_tag :rating, rating %>
+      <%= submit_tag rating, :class => "game_button rating" %> 
+    <% end %>
+  <% end %>
+  <br />
+  <b>Easy</b> flashcards will be revised less frequently than <b>hard</b> ones.
+  </div>

@@ -40,6 +40,20 @@ class User < ActiveRecord::Base
     learned_words >= building_type.words_required
   end
 
+  def correct_answer_bonus
+    bounded_update :combos, +1, 10
+    if combos >= 10
+      update_attribute :combos, 0
+      bounded_update :energy, +3, 30
+    end
+  end
+
+  def combo_image
+    if (0..7).include? combos then "combo_#{combos}.png"
+    else "combo_7.png"
+    end
+  end
+
   def village_unlocked?
     can_build? BuildingType.first_where :name => 'Hut'
   end

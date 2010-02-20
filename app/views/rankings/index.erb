@@ -1,0 +1,3 @@
+<% for link in @links %>
+  <p><%= link_to(link.humanize, {:action => link}) %></p>
+<% end %>

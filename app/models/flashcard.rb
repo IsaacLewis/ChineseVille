@@ -69,26 +69,29 @@ class Flashcard < ActiveRecord::Base
   def check_answer(answer)
     correct = (self.word_id == answer.id)
     if correct
-      message = correct_answer_update
+      message, food_bonus = correct_answer_update
     else
       message = wrong_answer_update
     end
     tests.create :answer_id => answer.id
-    return correct, message
+    return correct, message, food_bonus
   end
 
   def correct_answer_update
-    user.unbounded_update :food, +3 unless learned? or recently_answered_correctly?
+    user.correct_answer_bonus
     user.bounded_update :energy, -1, 0
-    unbounded_update :correct_tests, +1
-    'Correct!' + user.energy.to_s + ' ' + user.food.to_s
+    self.correct_tests += 1
+    save!
+    return 'Correct!', 3
   end
 
   def wrong_answer_update
     msg = wrong_answer_message # needs to be up here as it may change later
     bounded_update :knowledge_chance, -23, 0
-    unbounded_update :incorrect_tests, +1
+    self.incorrect_tests += 1
+    save!
     user.bounded_update :energy, -1, 0
+    user.update_attribute :combos, 0
     update_due_date 0
     msg
   end

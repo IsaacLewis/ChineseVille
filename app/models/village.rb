@@ -1,7 +1,10 @@
 class Village < ActiveRecord::Base
+  Names = ['beijing', 'shanghai', 'Wuhan', 'wuhan', 'HongKong', 'hongkong', 'Hong Kong', 'hong kong', 'Qingdao', 'qingdao', 'Tsingdao', 'tsigndao', 'London', 'london', 'New York', 'new york', 'Paris', 'paris', 'Tokyo', 'tokyo', 'Hanoi', 'hanoi']
+
   belongs_to :user
   has_many :buildings
   validates_uniqueness_of :name
+  validates_exclusion_of :name, :in => Names
   validates_inclusion_of :ration_level, :in => ['no','half','normal',
                                                 'extra','double']
   def food; user.food; end

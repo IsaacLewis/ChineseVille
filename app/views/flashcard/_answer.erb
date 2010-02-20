@@ -1,0 +1,11 @@
+<% if @answer_message.blank? %>
+<% elsif @correct %>
+  <div class="last_answer correct_answer">
+    <%= @answer_message %>
+  </div>
+<% else %>
+  <div class="last_answer incorrect_answer">
+    <%= @answer_message %>
+  </div>
+<% end %>
+

@@ -61,17 +61,23 @@ module Facebooker
       def top_redirect_to(*args)
         if request_is_facebook_iframe?
           @redirect_url = url_for(*args)
+          str = args.map {|a| a.to_s}.join ' ; '
           render :layout => false, :inline => <<-HTML
             <html><head>
-              <script type="text/javascript">  
-                window.top.location.href = <%= @redirect_url.to_json -%>;
-              </script>
+
+             <script type="text/javascript">
+               if (top != self && top.iframe_canvas != self) {
+                 top.location.replace(<%= @redirect_url.to_json -%>);
+             }</script>
+  
               <noscript>
                 <meta http-equiv="refresh" content="0;url=<%=h @redirect_url %>" />
                 <meta http-equiv="window-target" content="_top" />
               </noscript>                
             </head></html>
+
           HTML
+
         else
           redirect_to(*args)
         end

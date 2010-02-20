@@ -1,0 +1,16 @@
+<% content_for :content do %>
+
+  <%= render :partial => "reward_slider" %>
+  <%= render :partial => "answer" unless @last_answer.nil? %>
+  
+  <%= render :partial => "flashcard", :object => @flashcard %>
+  
+  <div id="buttons"><%= yield(:buttons) %></div>
+  <div id="footer">
+  <hr />
+  <%= render :partial => "combo" %>
+  <%= render :partial => "status" %>
+  </div>
+<% end %>
+
+<%= render :file => 'layouts/application' %>

@@ -25,7 +25,7 @@ class ActiveRecord::Base
   end
 
   def self.add_methods_of(object_name)
-    class_eval <<-ENDTEXT
+    class_eval <<-END
       alias active_record_method_missing method_missing
       def method_missing(m, *args, &block)
         begin
@@ -34,6 +34,6 @@ class ActiveRecord::Base
           return #{object_name}.send m, *args, &block
         end
       end
-    ENDTEXT
+    END
   end
 end

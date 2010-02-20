@@ -9,7 +9,7 @@ class FlashcardController < ApplicationController
   end
 
   def test
-    @flashcard = @user.next_flashcard :exclude => @last_flashcard
+    @flashcard = @user.next_flashcard :exclude => @flashcard # can't have the same flashcard twice
     render :choose_list and return if @flashcard.nil?    
     @possible_answers = @flashcard.possible_answers
     @answer_type = @flashcard.answer_type
@@ -17,26 +17,42 @@ class FlashcardController < ApplicationController
 
   def answer
     @last_answer = Word.find params[:answer_id]
-    @last_flashcard = Flashcard.find params[:question_id]
-    @correct, @answer_message = @last_flashcard.check_answer @last_answer
+    @flashcard = Flashcard.find params[:question_id]
+    @correct_answer_id = @flashcard.word.id
+    @correct, @answer_message, @last_reward = @flashcard.check_answer @last_answer
     @user.reload
     if @correct
-      render :rate_difficulty
+      respond_to do |format|
+        format.html {render :partial => 'rate_difficulty'}
+        format.js {render :template => 'flashcard/correct_answer.js.erb'}
+      end
     elsif @user.energy > 0
       test
-      render :test
+      respond_to do |format|
+        format.html {render :partial => 'test'}
+        format.js {render :template => 'flashcard/wrong_answer.js.erb'}
+      end
     else
-      render :no_energy
+      respond_to do |format|
+        format.html {render 'no_energy'}
+        format.js {render :template => 'flashcard/no_energy.js.erb'}
+      end
     end
   end
 
-  def rate_difficulty
-    flashcard = Flashcard.find params[:flashcard_id]
-    test and render :test if flashcard.nil?
+  def submit_difficulty_rating
+    @flashcard = Flashcard.find params[:flashcard_id]
+    test and render :test if @flashcard.nil?
     @correct = true
-    @answer_message = flashcard.rate_difficulty params[:rating]
-    @last_flashcard = flashcard
-    test and render :test
+    @answer_message = @flashcard.rate_difficulty params[:rating]
+    test
+    respond_to do |format|
+      format.html {render :partial => 'test'}
+      format.js {render :template => 'flashcard/submit_rating.js.erb'}
+    end
+  end
+
+  def no_energy
   end
 
   private

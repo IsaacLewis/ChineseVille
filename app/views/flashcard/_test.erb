@@ -1,0 +1,14 @@
+  <div id="answer_box">
+  <table class="skinny_table">
+  <% for answers in @possible_answers.in_groups_of 2 %>
+    <tr>
+    <% for answer in answers %>
+      <td>
+      <%= render :partial => "answer_button", :locals => {:answer => answer} %>
+      <td />
+    <% end %>
+    <tr />
+  <% end %>
+  </table>
+  </div>
+

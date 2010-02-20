@@ -1,11 +1,11 @@
 <% flashcard_id = "flashcard-#{flashcard.id}" %>
 <% tooltip_id = "tooltip-#{flashcard.id}" %>
 
-<div id="<%= flashcard_id%>" class="<%= css_class %>" style="background-color:#<%= flashcard.html_bg_colour %>">
+<div id="<%= flashcard_id%>" title="testing" class="<%= css_class %>" style="background-color:#<%= flashcard.html_bg_colour %>">
 <b><%= flashcard.character %></b>
 </div>
 
-<div id="<%= tooltip_id %>" style="display:none" class="tooltip">
+<div id="<%= tooltip_id %>" class="tooltip">
 <b><%= flashcard.english %></b> / <b><%= flashcard.pinyin %></b>
 <br />
 Knowledge chance: <%= flashcard.knowledge_chance %>%
@@ -17,6 +17,15 @@ Last studied: <%= flashcard.last_studied %>
 <%= "Due: #{flashcard.due_in}<br />" unless flashcard.next_due.nil? %>
 </div>
 
-<%= javascript_tag "new Tooltip('#{flashcard_id}', '#{tooltip_id}')" %>
+<%= javascript_tag "$(function(){ 
+    $('##{flashcard_id}').tooltip({
+	track: true,
+	delay: 0,
+	fade: 0,
+	bodyHandler: function() {
+	    return $('##{tooltip_id}').html();
+	}
+    });
+});" %>
 
 

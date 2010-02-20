@@ -9,5 +9,5 @@
 </div>
 
 
-<%= javascript_tag "tickClock(#{seconds_to_next_population.to_s},#{1.day.to_s},'foodClock','food',#{@village.food.to_s})" %>
+<%= javascript_tag "tickClock(#{seconds_to_next_population.to_s},#{1.day.to_s},'foodClock','food',#{village.net_food},100000000000)" %>
 

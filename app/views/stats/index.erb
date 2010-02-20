@@ -1,0 +1,8 @@
+<div id="stats-box">
+<h2><%= @user.current_list.name %></h2>
+<h3><%= @user.learned_words %> Words Learned</h3>
+<%= render :partial => "vocab_box", :locals => {:list => @user.learned_flashcards} %>
+
+<h3>Currently learning</h3>
+<%= render :partial => "vocab_box", :locals => {:list => @user.unlearned_flashcards} %>
+</div>

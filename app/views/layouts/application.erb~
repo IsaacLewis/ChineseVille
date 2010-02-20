@@ -1,0 +1,10 @@
+<div id='test'></div>
+
+<ul id="navigation">
+  <li><%= link_to "Study", :controller => 'flashcard', :action => 'test' %></li>
+  <li><%= link_to "Stats", :controller => 'stats' %></li>
+  <li><%= link_to "Rankings", :controller => 'rankings' %></li>
+</ul>
+<p style="color: green"><%= flash[:notice] %></p>
+
+<div id="content"><%= yield(:content) or yield %></div>

@@ -1,0 +1,12 @@
+<b>Choose a vocabulary list to study from:</b>
+<br />
+<i>If you want your textbook added, request it <a href='http://www.facebook.com/topic.php?uid=311395485820&topic=15585'>here</a>.
+<hr />
+
+<% for list in WordList.all %>
+  <% form_tag({:controller => "flashcard", :action => "select_list"}, :method => :post) do %>
+    <%= hidden_field_tag :list_id, list.id %>
+    <%= submit_tag "#{list.name} (#{list.words.count} words)", :class => "game_button" %> 
+  <% end %>
+  <hr />
+<% end %>
