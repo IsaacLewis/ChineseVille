@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
     bounded_update :combos, +1, 10
     if combos >= 10
       update_attribute :combos, 0
-      bounded_update :energy, +3, 30
+      # bounded_update :energy, +3, 30
     end
   end
 

@@ -1,5 +1,0 @@
-  <% form_tag ({:controller => "flashcard", :action => "answer"}, :method => :post, :class => "inline") do %>
-    <%= hidden_field_tag :question_id, @flashcard.id %>
-    <%= hidden_field_tag :answer_id, answer.id %>
-    <%= submit_tag answer.english.gsub('; ',";\r\n"), :class => "answer" %> 
-  <% end %>

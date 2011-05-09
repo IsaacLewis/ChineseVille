@@ -9,6 +9,8 @@ class FlashcardController < ApplicationController
   end
 
   def test
+    # FacebookerPublisher.deliver_news_feed(@fbuser, "Testing", "Hello, world")
+
     @flashcard = @user.next_flashcard :exclude => @flashcard # can't have the same flashcard twice
     render :choose_list and return if @flashcard.nil?    
     @possible_answers = @flashcard.possible_answers
@@ -23,18 +25,21 @@ class FlashcardController < ApplicationController
     @user.reload
     if @correct
       respond_to do |format|
-        format.html {render :partial => 'rate_difficulty'}
+        format.html {render 'rate_difficulty'}
+        format.fbml {render 'rate_difficulty'}
         format.js {render :template => 'flashcard/correct_answer.js.erb'}
       end
     elsif @user.energy > 0
       test
       respond_to do |format|
-        format.html {render :partial => 'test'}
+        format.html {render 'test'}
+        format.fbml {render 'test'}
         format.js {render :template => 'flashcard/wrong_answer.js.erb'}
       end
     else
       respond_to do |format|
         format.html {render 'no_energy'}
+        format.fbml {render 'no_energy'}
         format.js {render :template => 'flashcard/no_energy.js.erb'}
       end
     end
@@ -47,7 +52,8 @@ class FlashcardController < ApplicationController
     @answer_message = @flashcard.rate_difficulty params[:rating]
     test
     respond_to do |format|
-      format.html {render :partial => 'test'}
+      format.html {render 'test'}
+      format.fbml {render 'test'}
       format.js {render :template => 'flashcard/submit_rating.js.erb'}
     end
   end

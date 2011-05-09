@@ -2,11 +2,11 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-  ensure_authenticated_to_facebook
+  # ensure_authenticated_to_facebook
   before_filter :require_login
 
   helper :all # include all helpers, all the time
-  protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  # protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
   private
 
   def require_login
+=begin
     @fbuser = session[:facebook_session].user
     @user = User.first_where :facebook_id => @fbuser.facebook_id
     if @user.nil?
@@ -21,6 +22,8 @@ class ApplicationController < ActionController::Base
     else
       @user.reload
     end
+=end
+    @user = User.first
   end
 
   def require_admin

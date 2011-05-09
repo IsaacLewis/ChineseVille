@@ -1,0 +1,6 @@
+<% content_for :buttons do %>
+<%= fb_prompt_permission('publish_stream', "Give ChineseVille permissions to post stories to your stream?" ) %> 
+  <%= render :partial => 'test' %>
+<% end %>
+
+<%= render :file => 'layouts/show_flashcard' %>

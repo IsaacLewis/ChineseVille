@@ -2,7 +2,7 @@
 $('#answer_<%= @last_answer.id %>').animate({backgroundColor: '#7a7'}, 2000, function() {
   $('#buttons').html('<%= escape_javascript(render :partial => 'rate_difficulty') %>');
   progress_bar = $('#progress_bar');
-  progress_bar.animate({width: <%= @user.combos %> * 28});
+e  progress_bar.animate({width: <%= @user.combos %> * 28});
 
   // rice_element = $('#rice_amount');
   // rice = parseInt(rice_element.html());

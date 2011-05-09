@@ -56,7 +56,7 @@ class Flashcard < ActiveRecord::Base
     # next due date, we won't start scheduling it for SRS yet
     return unless learned? or !next_due.nil?
     if last_interval.nil? or q < 3
-      new_interval = 0.5 * q
+      new_interval = rand * 2 * q
     else
       new_interval = [last_interval * efactor, 1].max
     end

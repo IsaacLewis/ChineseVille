@@ -3,7 +3,7 @@ body {
   background-color: #f7f7f7;
   color: #333;
   line-height: 140%;
-  font-size: 14px;
+  font-size: 120%;
   margin:0;
   padding:0;
 }
@@ -20,6 +20,8 @@ pre {
 
 a { color: #000; }
 a:hover { color: #eee; background-color:#7f93bc; }
+
+form {margin: 0px; padding: 0px}
 
 .last_answer {
   font-size: 120%;
@@ -144,7 +146,6 @@ hr {
   color: #eee;
   border: 2px outset #29447e;
   text-align: center;
-  font-size: 14px;
   font-weight: bold;
   margin: 2px;
   padding: 5px;
@@ -155,9 +156,11 @@ hr {
   width: 230px;
   height: 50px;
   display: inline;
+  font-size: 20px;
 }
 
 .rating {
+  margin: 2px;
   width: 230px;
   height: 50px;
   font-size:20px;

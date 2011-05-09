@@ -1,16 +1,19 @@
-  <%= stylesheet_link_tag 'scaffold' %>
-  <%= javascript_include_tag "all" %> 
+<html>
+<head>
+  <%= stylesheet_link_tag "http://127.0.0.1:3000/stylesheets/scaffold.css" %>
+<head/>
 
-
+<body>
 <div id='test'></div>
 
 <ul id="navigation">
-  <li><fb:name uid="<%= @user.facebook_id %>" useyou="false" /></li>
+  <li><fb:profile-pic uid="<%= @user.facebook_id %>" width="30px" height="30px" /></li>
   <li><%= link_to "Study", :controller => 'flashcard', :action => 'test' %></li>
   <li><%= link_to "Stats", :controller => 'stats' %></li>
   <li><%= link_to "Rankings", :controller => 'rankings' %></li>
 </ul>
 <p style="color: green"><%= flash[:notice] %></p>
 
-
 <div id="content"><%= yield(:content) or yield %></div>
+</body>
+</html>
